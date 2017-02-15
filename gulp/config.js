@@ -7,7 +7,7 @@ module.exports = {
   },
 
   browserSyncConfig: {
-    open: false,
+    open: true,
     notify: false,
     server: './build'
   }

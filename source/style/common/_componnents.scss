@@ -1,7 +1,52 @@
 $color: #6c9c5a;
 $colorAccent: #4e8839;
 $textColor: #566358;
-$textColoAccent: #373e42;
-$textColoInvert: #fff;
-$lincColor: #6da3bd;
+$textColorAccent: #373e42;
+$textColorInvert: #fff;
+$linkColor: #6da3bd;
+$errorColor: #e34844;
 $transition: all .3s ease;
+$titleSize: 63px;
+$subTtitleSize: 35px;
+
+%title {
+  font-family: 'sansus_webissimoregular';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  padding-bottom: 25px;
+  margin: 0 auto 25px;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: $textColor;
+    width: 90px;
+    height: 3px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+%vhc {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%vc {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+%hc {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+%ibm {
+  display: inline-block;
+  vertical-align: middle;
+}

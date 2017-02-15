@@ -1,27 +1,256 @@
 @import "common/fonts";
 @import "common/componnents";
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
-//.layout{
-//    min-height: 100%;
-//    margin: 0 0 -60px 0;
-//    &:after{
-//        content: '';
-//        display: block;
-//        width: 100%;
-//        height: 60px;
-//    }
-//}
-//.footer {
-//    min-height: 60px;
-//    position: relative;
-//}
-@import "common/_index";
+
+.layout {
+  min-height: 100%;
+  margin: 0 0 -55px 0;
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 55px;
+  }
+}
+
+.footer {
+  min-height: 55px;
+  position: relative;
+}
+
+.form {
+  @extend .first-info;
+  padding: 40px 20px 65px;
+}
+
+.form__title {
+  @extend %title;
+  color: $textColorInvert;
+  font-size: $subTtitleSize;
+  &:after {
+    background: $textColorInvert;
+  }
+}
+
+.field {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-left: 45px;
+  border-radius: 22px;
+  margin-bottom: 20px;
+}
+
+.field__input {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  font-family: "robotoregular";
+  font-size: 16px;
+  color: $textColorAccent;
+  border: none;
+  box-shadow: none;
+  background-color: #fff;
+  border-radius: 22px;
+  outline: none;
+  &:focus {
+    box-shadow: inset 0 0 1px 1px $color;
+    & ~ .field__icon {
+      fill: $color;
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-family: "robotoregular";
+    font-size: 16px;
+    color: $textColorAccent;
+    opacity: .5
+  }
+  ::-moz-placeholder {
+    font-family: "robotoregular";
+    font-size: 16px;
+    color: $textColorAccent;
+    opacity: .5
+  }
+  :-moz-placeholder {
+    font-family: "robotoregular";
+    font-size: 16px;
+    color: $textColorAccent;
+    opacity: .5
+  }
+  :-ms-input-placeholder {
+    font-family: "robotoregular";
+    font-size: 16px;
+    color: $textColorAccent;
+    opacity: .5
+  }
+}
+
+.error {
+  .field__input {
+    box-shadow: inset 0 0 1px 1px $errorColor;
+    &:focus {
+      & ~ .field__icon {
+        fill: $errorColor;
+      }
+    }
+  }
+  .field__error {
+    display: block;
+  }
+  .field__icon {
+    fill: $errorColor;
+  }
+}
+
+.field__icon {
+  fill: $textColorAccent;
+  opacity: .5;
+  position: absolute;
+  left: 15px;
+  @extend %vc;
+}
+
+.field__error {
+  display: none;
+  max-width: 100%;
+  background-color: $errorColor;
+  font-size: 14px;
+  color: $textColorInvert;
+  padding: 10px 20px;
+  position: absolute;
+  top: calc(100% + 10px);
+  @extend %hc;
+  z-index: 1;
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $errorColor;
+    position: absolute;
+    bottom: 100%;
+    @extend %hc;
+  }
+}
+
+.check {
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox {
+  @extend %ibm;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  margin-right: 10px;
+  opacity: 0;
+  &:checked {
+    & ~ .check__icon {
+      display: block;
+    }
+  }
+}
+
+.false-checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: $color;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.check__icon {
+  display: none;
+  width: 12px;
+  height: 9px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  fill: $textColorInvert;
+}
+
+.check__label {
+  @extend %ibm;
+  height: 13px;
+  font-family: "robotoregular";
+  font-size: 16px;
+  color: $textColorInvert;
+  opacity: .8;
+  line-height: 13px;
+  user-select: none;
+}
+
+.radio-gorup {
+  display: block;
+  text-align: center;
+}
+
+.radio-group__title {
+  @extend .check__label;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.radio {
+  @extend %ibm;
+  position: relative;
+  margin-right: 35px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.radiobox {
+  @extend %ibm;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  margin-right: 10px;
+  &:checked {
+    & ~ .false-radio:after {
+      display: block;
+    }
+  }
+}
+
+.false-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $textColorInvert;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &:after {
+    content: '';
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: $color;
+    border-radius: 50%;
+    position: absolute;
+    @extend %vhc;
+  }
+}
+
+.radio-label {
+  @extend .check__label
+}
+
+@import "common/_central-content";

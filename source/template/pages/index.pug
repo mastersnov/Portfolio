@@ -1,8 +1,33 @@
-extends ../_template
+extends ../_central-content
 
 block variables
     - var title = 'Welcome'
 
+block content
+    .content
+        a.fixed-btn.login-btn(href="login.html") Авторизироваться
+        .first-info
+            .user
+                .user__ava
+                    img.user__img(src="assets/img/ava.png")
+                .user__name
+                    | Виталик Суханов
+                .user__descr
+                    | Личный сайт веб разработчика
+            .socials
+                a.social.social_vk(href="#")
+                    svg.social__icon
+                        use(xlink:href="assets/img/sprite.svg#vk")
+                a.social.social_git(href="#")
+                    svg.social__icon
+                        use(xlink:href="assets/img/sprite.svg#github")
+                a.social.social_in(href="#")
+                    svg.social__icon
+                        use(xlink:href="assets/img/sprite.svg#in")
+            .btns-panel
+                a(href="#").btns-panel__item Мои работы
+                a(href="#").btns-panel__item Обо мне
+                a(href="#").btns-panel__item Блог
 
 
 
