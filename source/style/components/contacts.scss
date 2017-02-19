@@ -1,0 +1,37 @@
+.contacts{
+  @extend %likeForm;
+  padding: 40px;
+  background-color: rgba(#f4f5f0, .85);
+  position: absolute;
+  @extend %vhc;
+}
+.contacts-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contacts-list__item{
+  display: block;
+  padding-left: 35px;
+  position: relative;
+  &+&{
+    margin-top: 25px;
+  }
+}
+.contacts-list__link{
+  @include fz($textSize);
+  color: rgba($textColor, .8);
+  text-decoration: none;
+  @include trans();
+  &:hover{
+    color: $colorAccent;
+  }
+}
+.contacts-list__icon{
+  width: 24px;
+  height: 24px;
+  fill: $colorAccent;
+  position: absolute;
+  left: 0;
+  @extend %vc;
+}

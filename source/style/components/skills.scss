@@ -1,0 +1,61 @@
+.skills-group{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.skills-group__item{
+  display: block;
+  &+&{
+    margin-top: 40px;
+  }
+}
+.skills-group__title{
+  display: block;
+  color: $textColor;
+  @include fz(28px);
+  font-family:"robotomedium";
+  margin-bottom: 20px;
+}
+
+.skills-list{
+  @extend .skills-group;
+}
+.skills-list__item{
+  @extend %ibm;
+
+  margin-right: 4.444444444444444%;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.skill{
+  display: block;
+  position: relative;
+}
+.circles {
+  display: block;
+  width: 120px;
+  height: 120px;
+  fill: none;
+  stroke-width: 15;
+}
+.circle__first {
+  stroke: #dfdcd5;
+}
+.circle__second {
+  stroke: $color;
+  transition: all 1s;
+  @include circle(60, 0.2);
+}
+
+
+.skill__title{
+  display: block;
+  max-width: 80px;
+  color: $colorAccent;
+  @include fz(14px);
+  font-family:"robotoregular";
+  text-align: center;
+  position: absolute;
+  @extend %vhc;
+}

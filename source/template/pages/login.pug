@@ -1,7 +1,8 @@
-extends ../_central-content
+extends ../welcome
 
 block variables
     - var title = 'Welcome'
+    - var user__descr = 'Личный сайт веб разработчика'
 
 block content
     .content
@@ -21,18 +22,15 @@ block content
 
             label.check
                 input(type="checkbox" name="human").checkbox
-                span.false-checkbox
                 + svg("check__icon", "check")
                 span.check__label Я человек
             .radio-gorup
                 .radio-group__title Вы точно не робот?
                 label.radio
                     input(type="radio" name="sure").radiobox
-                    span.false-radio
                     span.radio-label Да
                 label.radio
                     input(type="radio" name="sure" checked).radiobox
-                    span.false-radio
                     span.radio-label Не уверен
 
             .btns-panel

@@ -1,0 +1,23 @@
+.sect-title{
+  display: inline-block;
+  @include fz($titleSize);
+  color: $textColorAccent;
+  font-family:"sansus_webissimoregular";
+  text-transform: uppercase;
+  text-align: center;
+  padding: 50px 65px;
+  margin: 0;
+  background: center no-repeat;
+  background-size:contain;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: $textColorAccent;
+    width: 90px;
+    height: 3px;
+    position: absolute;
+    bottom: 20px;
+    @extend %hc;
+  }
+}

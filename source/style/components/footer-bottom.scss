@@ -1,0 +1,10 @@
+.footer__bottom{
+  background: rgba($color, .85);
+  text-align: center;
+  padding: 10px 0;
+}
+.copyright{
+  @include fz($textSize);
+  color: $textColorInvert;
+  font-family:"robotoregular";
+}

@@ -1,34 +1,22 @@
-extends ../_central-content
+extends ../welcome
 
 block variables
     - var title = 'Welcome'
+    - var user__descr = 'Личный сайт веб разработчика'
 
 block content
     .content
-        a.fixed-btn.login-btn(href="login.html") Авторизироваться
         .first-info
-            .user
-                .user__ava
-                    img.user__img(src="assets/img/ava.png")
-                .user__name
-                    | Виталик Суханов
-                .user__descr
-                    | Личный сайт веб разработчика
-            .socials
-                a.social.social_vk(href="#")
-                    svg.social__icon
-                        use(xlink:href="assets/img/sprite.svg#vk")
-                a.social.social_git(href="#")
-                    svg.social__icon
-                        use(xlink:href="assets/img/sprite.svg#github")
-                a.social.social_in(href="#")
-                    svg.social__icon
-                        use(xlink:href="assets/img/sprite.svg#in")
-            .btns-panel
-                a(href="#").btns-panel__item Мои работы
-                a(href="#").btns-panel__item Обо мне
-                a(href="#").btns-panel__item Блог
+            include ../components/user
 
+            include ../components/socials
+
+            nav.btns-panel
+                a(href="projects.html").btns-panel__item Мои работы
+                a(href="about.html").btns-panel__item Обо мне
+                a(href="blog.html").btns-panel__item Блог
+
+        a(href="login.html").login-btn.login-btn__fixed Авторизироваться
 
 
 

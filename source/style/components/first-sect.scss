@@ -1,0 +1,47 @@
+.first-sect{
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.first-sect__bg{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  @extend %hc;
+}
+
+.first-sect__socials{
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  .socials__icon:hover{
+    &:hover {
+      fill: $colorAccent;
+    }
+  }
+}
+
+.first-sect__user{
+  position: absolute;
+  @extend %vhc;
+}
+
+.scroll-link{
+  display: block;
+  opacity: 0.7;
+  position: absolute;
+  @include align(X);
+  bottom: 70px;
+  @include trans();
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.scroll-link__icon{
+  width: 26px;
+  height: 16px;
+  fill: #fff;
+}

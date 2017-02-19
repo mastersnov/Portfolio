@@ -1,0 +1,18 @@
+block variables
+include components/_mixins
+
+doctype html
+html
+  head
+    include components/head
+
+  body.body.body_welcome
+    .layout
+      block content
+
+    footer.footer.footer_welcome
+      include components/footer-bottom
+
+
+  script(src='/assets/js/foundation.js' defer)
+  script(src='/assets/js/app.js' defer)

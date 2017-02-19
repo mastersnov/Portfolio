@@ -1,0 +1,26 @@
+.login-btn {
+  width: 180px;
+  height: 45px;
+  border: 1px solid #fff;
+  font-family: 'robotomedium';
+  @include fz(16px);
+  text-decoration: none;
+  color: $textColorInvert;
+  @include trans();
+  text-align: center;
+  line-height: 45px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-radius: 22px;
+  cursor: pointer;
+  &:hover {
+    border-color: $colorAccent;
+    background-color: $colorAccent;
+  }
+  &__fixed{
+    position: absolute;
+    top: 25px;
+    right: 5.555555555555556%;
+  }
+}

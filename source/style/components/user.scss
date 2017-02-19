@@ -1,0 +1,30 @@
+.user{
+  text-align: center;
+}
+.user__ava {
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.user__img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.user__name {
+  color: $textColorInvert;
+  @include fz($subTtitleSize);
+  font-family: 'robotomedium';
+  margin-bottom: 10px;
+}
+
+.user__descr {
+  color: $textColorInvert;
+  @include fz($textSize);
+  font-family: 'robotoregular';
+}

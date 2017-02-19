@@ -1,0 +1,49 @@
+.about{
+  display: flex;
+}
+.about__col{
+  width: 50%;
+  position: relative;
+}
+.about__triangle{
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  bottom: 100%;
+}
+.about__col_left{
+  background-color: #ebefe2;
+  .about__triangle{
+    left: 0;
+    fill:#ebefe2
+  }
+}
+.about__col_right{
+  background-color: #f4f5f0;
+  padding: 0 40px 40px;
+  .about__triangle{
+    right: 0;
+    fill:#f4f5f0
+  }
+}
+
+.about-content{
+  position: relative;
+  padding:0 20px 0 440px;
+  .sect-title{
+    position: absolute;
+    top: -50px;
+    left: 50px;
+  }
+}
+
+.block-img{
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 40px;
+}
+.block-text{
+  color: $textColor;
+  @include fz($textSize);
+  line-height: 1.5;
+}

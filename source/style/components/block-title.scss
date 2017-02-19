@@ -1,0 +1,20 @@
+.block-title{
+  @include fz($subTtitleSize);
+  color: $textColor;
+  font-family:"sansus_webissimoregular";
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 30px;
+  padding:0 0 30px;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background: $textColor;
+    width: 90px;
+    height: 3px;
+    position: absolute;
+    bottom: -1px;
+    @extend %hc;
+  }
+}

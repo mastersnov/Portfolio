@@ -1,0 +1,13 @@
+ul.socials
+  -
+    var icons = [
+      ['vk', '//vk.com'],
+      ['github', '//github.com'],
+      ['in', '//linkedin.com']
+    ]
+
+  each icon in icons
+    li.socials__item
+      a(href=icon[1] target="_blank").socials__link
+        svg.socials__icon
+          use(xlink:href=`assets/img/sprite.svg#${icon[0]}`)
