@@ -1,11 +1,11 @@
+-
+  var links = [
+    ['Мои работы', 'projects.html'],
+    ['Обо мне', 'about.html'],
+    ['Блог', 'blog.html'],
+    ['Авторизация', 'login.html']
+  ]
 ul.footer-nav
-  -
-    var links = [
-      ['Мои работы', 'projects.html'],
-      ['Обо мне', 'about.html'],
-      ['Блог', 'blog.html'],
-      ['Авторизация', 'login.html']
-    ]
   each link in links
     li.footer-nav__item
       a(href=link[1]).footer-nav__link=link[0]

@@ -1,0 +1,14 @@
+extends ../portfolio
+
+block variables
+  - var title = 'About me'
+  - var page = 'projects'
+  - var user__name = 'Виталик Суханов'
+  - var user__descr = 'Личный сайт веб разработчика'
+
+block content
+  include ../components/first-sect
+
+  include ../components/works
+
+  include ../components/reviews

@@ -6,7 +6,7 @@ html
     head
         include components/head
 
-    body.body
+    body.body(class=`body_${page}`)
         .layout
             block content
 
@@ -15,4 +15,4 @@ html
 
 
     script(src='/assets/js/foundation.js' defer)
-    script(src='/assets/js/main.js' defer)
+    script(src='/assets/js/app.js' defer)

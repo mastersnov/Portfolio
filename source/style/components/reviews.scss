@@ -1,0 +1,15 @@
+.reviews{
+  min-height: 1355px;
+  padding-top: 20px;
+  text-align: center;
+  background: #f4f5f0 center bottom no-repeat;
+  background-size:contain;
+  position: relative;
+  .form_contact{
+    margin: 0 auto;
+  }
+  .scroll-link_up{
+    bottom: 225px;
+    transform: translateX(-50%) rotateZ(180deg);
+  }
+}

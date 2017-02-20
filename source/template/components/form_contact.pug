@@ -1,0 +1,17 @@
+form.form.form_contact
+  h3.block-title Связаться со мной
+  label.field
+    input(type="text" name="name" placeholder="Имя").field__input
+    span.field__error Введите логин
+
+  label.field
+    input(type="text" name="email" placeholder="Еmail").field__input
+    span.field__error Введите пароль
+
+  label.field
+    textarea( name="message" placeholder="Ваше сообщение").field__input.field__input_textarea
+    span.field__error Введите пароль
+
+  .btns-panel
+    button(type="submit").btns-panel__item Отправить
+    button(type="reset").btns-panel__item Очистить

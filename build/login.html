@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="/assets/css/foundation.css">
+    <link rel="stylesheet" href="/assets/css/main.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body class="body body_welcome">
+    <div class="layout">
+      <div class="content">
+        <form class="form form_login">
+          <h3 class="block-title">Авторизуйтесь</h3>
+          <label class="field">
+            <input class="field__input" type="text" name="loogin" placeholder="Логин">
+            <svg class="field__icon field__icon_login">
+              <use xlink:href="assets/img/sprite.svg#login"></use>
+            </svg><span class="field__error">Введите логин</span>
+          </label>
+          <label class="field">
+            <input class="field__input" type="text" name="password" placeholder="Пароль">
+            <svg class="field__icon field__icon_pas">
+              <use xlink:href="assets/img/sprite.svg#password"></use>
+            </svg><span class="field__error">Введите пароль</span>
+          </label>
+          <label class="check">
+            <input class="checkbox" type="checkbox" name="human">
+            <svg class="check__icon">
+              <use xlink:href="/assets/img/sprite.svg#check"></use>
+            </svg><span class="check__label">Я человек</span>
+          </label>
+          <div class="radio-gorup">
+            <div class="radio-group__title">Вы точно не робот?</div>
+            <label class="radio">
+              <input class="radiobox" type="radio" name="sure"><span class="radio-label">Да</span>
+            </label>
+            <label class="radio">
+              <input class="radiobox" type="radio" name="sure" checked><span class="radio-label">Не уверен</span>
+            </label>
+          </div>
+          <div class="btns-panel"><a class="btns-panel__item" href="index.html">На главнюу</a>
+            <button class="btns-panel__item" type="submit">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="footer footer_welcome">
+      <div class="footer__bottom">
+        <div class="wrapper">
+          <div class="copyright">&copy; Виталик Суханов | создано с любовью в LoftSchool | 2017</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/assets/js/foundation.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</html>

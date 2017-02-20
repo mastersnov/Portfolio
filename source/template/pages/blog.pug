@@ -1,3 +1,23 @@
-//
-   Created by Vitalik on 19.02.2017.
+extends ../portfolio
 
+block variables
+  - var title = 'About me'
+  - var page = 'blog'
+  - var user__name = 'Блог'
+  - var user__descr = 'Статьи, которые я написал'
+
+block content
+
+  include ../components/first-sect
+
+  section.sect.blog
+    svg(viewbox="0 0 1800 180" preserveAspectRatio="none").both-head
+      polygon(points="0,180 0,0 900,180 1800,0 1800,180")
+
+    .blog__wrapper
+
+      aside.blog__nav
+        include ../components/anchors
+
+      main.blog__content
+        include ../components/articles

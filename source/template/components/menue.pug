@@ -1,0 +1,15 @@
+-
+  var nav = [
+    ['Мои работы', 'projects.html'],
+    ['Обо мне', 'about.html'],
+    ['Блог', 'blog.html'],
+    ['Авторизация', 'login.html']
+  ]
+.menue
+  .wrapper
+    nav.nav
+      ul.nav-list
+      each link in nav
+        li.nav-list__item
+          a(href=link[1]).nav-list__link=link[0]
+    button.close-menue

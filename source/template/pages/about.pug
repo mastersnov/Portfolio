@@ -2,59 +2,13 @@ extends ../portfolio
 
 block variables
   - var title = 'About me'
+  - var page = 'about'
+  - var user__name = 'Виталик Суханов'
   - var user__descr = 'Личный сайт веб разработчика'
 
 block content
-  section.first-sect
-    img.first-sect__bg(src=("assets/img/water.jpg"))
-    .first-sect__user
-      include ../components/user
+  include ../components/first-sect
 
-    .first-sect__socials
-      include ../components/socials
+  include ../components/about
 
-    .first-sect__burger
-      button.burger
-        + svg('burger-icon', 'hamburger')
-    a(href="#").scroll-link
-      + svg('scroll-link__icon', 'arrow_down')
-
-  section.sect.about
-    .about__col.about__col_left
-      svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle
-        polygon(points="0,0 0,180 900,180")
-
-      include ../components/about-content
-
-    .about__col.about__col_right
-        svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle
-          polygon(points="900,0 900,180 0,180")
-
-        include ../components/skills
-
-  section.sect.sect-map
-      include ../components/map
-
-      .contacts
-        .block-title
-          | Контакты
-        ul.contacts-list
-          li.contacts-list__item
-            a(href="tel:#" target="_blank").contacts-list__link
-              + svg('contacts-list__icon','skype')
-              |cvthicvthi
-
-          li.contacts-list__item
-            a(href="mailto:#" target="_blank").contacts-list__link
-              + svg('contacts-list__icon','mail')
-              |mastersnov@email.ua
-
-          li.contacts-list__item
-            a(href="tel:+380662910714" target="_blank").contacts-list__link
-              + svg('contacts-list__icon','phone')
-              |+380662910714
-
-          li.contacts-list__item
-            a(href="#" target="_blank").contacts-list__link
-              + svg('contacts-list__icon','map_marker')
-              |г.Сумы, пл. Независимости 2
+  include ../components/sect-map

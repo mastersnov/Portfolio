@@ -1,0 +1,40 @@
+.article{
+  padding-bottom: 70px;
+  margin-bottom: 70px;
+  position: relative;
+  &:after{
+    content: '';
+    display: block;
+    width: 680px;
+    height: 5px;
+    background-color: rgba(#373e42, .07);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+  }
+}
+
+.article__title{
+  @include fz($subTtitleSize);
+  color: $textColor;
+  font-family:"sansus_webissimoregular";
+  text-transform: uppercase;
+  margin: 0 auto 30px;
+  padding:0;
+}
+
+.article__date{
+  @include fz($textSize);
+  color: $color;
+  font-family:"robotoregular";
+  margin-bottom: 30px;
+}
+.article p{
+  @include fz($textSize);
+  color: $textColor;
+  font-family:"robotoregular";
+  line-height: 1.5;
+}
+.code{
+  margin: 0;
+}

@@ -1,0 +1,13 @@
+section.reviews(style='background-image: url("assets/img/about_bg.png")')
+
+  h2.sect-title(style='background-image: url("assets/img/about_header.png")')
+    | Что обо мне
+    br
+    | говорят
+
+  include ../components/review-list
+
+  include ../components/form_contact
+
+  a(href="#").scroll-link.scroll-link_up
+    + svg('scroll-link__icon', 'arrow_down')

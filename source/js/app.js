@@ -1,7 +1,10 @@
 (function() {
   'use strict';
 
-  setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);
+  $('.burger').on('click', function () {
+    $('.menue').addClass('is-visible');
+  });
+  $('.close-menue').on('click', function () {
+    $('.menue').removeClass('is-visible');
+  })
 })();

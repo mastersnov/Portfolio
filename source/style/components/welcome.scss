@@ -37,6 +37,15 @@
   .user {
     margin-bottom: 35px;
   }
+  .socials__link{
+    opacity: .5;
+    &:hover{
+      opacity: 1;
+      .socials__icon{
+        fill: $colorAccent;
+      }
+    }
+  }
 }
 
 .footer_welcome {
@@ -45,7 +54,11 @@
   color: $textColorInvert;
   font-size: 16px;
   font-family: 'robotoregular';
-  padding-bottom: 35px;
+  padding-bottom: 15px;
+  margin-top: 0;
+  .footer__bottom{
+    background-color: transparent;
+  }
 }
 
 

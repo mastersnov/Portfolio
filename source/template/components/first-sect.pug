@@ -1,0 +1,16 @@
+section.first-sect
+  img.first-sect__bg(src=("assets/img/water.jpg"))
+  .wrapper
+    .first-sect__user
+      include ../components/user
+
+    .first-sect__socials
+      include ../components/socials
+
+    .first-sect__burger
+      button.burger
+        + svg('burger-icon', 'hamburger')
+
+    a(href="#").scroll-link.scroll-link_down
+      + svg('scroll-link__icon', 'arrow_down')
+  include ../components/menue

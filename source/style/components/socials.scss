@@ -16,12 +16,13 @@
   cursor: pointer;
   text-decoration: none;
   outline: none;
+  @include trans();
 }
 
 .socials__icon {
   width: 31px;
   height: 22px;
   fill: #fff;
-  transition: $transition;
+  @include trans();
   backface-visibility: hidden;
 }

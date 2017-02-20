@@ -1,38 +1,8 @@
 extends ../welcome
 
 block variables
-    - var title = 'Welcome'
-    - var user__descr = 'Личный сайт веб разработчика'
+  - var title = 'Welcome'
 
 block content
-    .content
-        form.form.form_login
-            h3.form__title Авторизуйтесь
-            label.field
-                input(type="text" name="loogin" placeholder="Логин").field__input
-                svg.field__icon.field__icon_login
-                    use(xlink:href="assets/img/sprite.svg#login")
-                span.field__error Введите логин
-
-            label.field
-                input(type="text" name="password" placeholder="Пароль").field__input
-                svg.field__icon.field__icon_pas
-                    use(xlink:href="assets/img/sprite.svg#password")
-                span.field__error Введите пароль
-
-            label.check
-                input(type="checkbox" name="human").checkbox
-                + svg("check__icon", "check")
-                span.check__label Я человек
-            .radio-gorup
-                .radio-group__title Вы точно не робот?
-                label.radio
-                    input(type="radio" name="sure").radiobox
-                    span.radio-label Да
-                label.radio
-                    input(type="radio" name="sure" checked).radiobox
-                    span.radio-label Не уверен
-
-            .btns-panel
-                a(href="index.html").btns-panel__item На главнюу
-                button(type="submit").btns-panel__item Войти
+  .content
+    include ../components/form_login

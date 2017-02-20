@@ -1,0 +1,12 @@
+section.sect.about
+  .about__col.about__col_left
+    svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle
+      polygon(points="0,0 0,180 900,180")
+
+    include ../components/about-content
+
+  .about__col.about__col_right
+    svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle
+      polygon(points="900,0 900,180 0,180")
+
+    include ../components/skills

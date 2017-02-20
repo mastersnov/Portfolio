@@ -1,22 +1,20 @@
 extends ../welcome
 
 block variables
-    - var title = 'Welcome'
-    - var user__descr = 'Личный сайт веб разработчика'
+  - var title = 'Welcome'
+  - var user__name = 'Виталик Суханов'
+  - var user__descr = 'Личный сайт веб разработчика'
 
 block content
-    .content
-        .first-info
-            include ../components/user
+  .content
+    .first-info
+      include ../components/user
 
-            include ../components/socials
+      include ../components/socials
 
-            nav.btns-panel
-                a(href="projects.html").btns-panel__item Мои работы
-                a(href="about.html").btns-panel__item Обо мне
-                a(href="blog.html").btns-panel__item Блог
+      nav.btns-panel
+        a(href="projects.html").btns-panel__item Мои работы
+        a(href="about.html").btns-panel__item Обо мне
+        a(href="blog.html").btns-panel__item Блог
 
-        a(href="login.html").login-btn.login-btn__fixed Авторизироваться
-
-
-
+    a(href="login.html").login-btn.login-btn__fixed Авторизироваться

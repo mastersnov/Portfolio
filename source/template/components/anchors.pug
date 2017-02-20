@@ -1,0 +1,12 @@
+-
+  var anchors = [
+    ['Самое важное в SASS', '#topic1'],
+    ['Приёмы в вёрстке, без которых не обходится ни один сайт', '#topic2'],
+    ['Самый необходимый набор Gulp плагинов', '#topic3'],
+    ['Почему я выбрал Jade', '#topic4']
+  ]
+
+ul.anchors
+  each anchor in anchors
+    li.anchors__item
+      a(href=anchor[1]).anchors__link=anchor[0]

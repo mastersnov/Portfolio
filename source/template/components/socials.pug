@@ -1,11 +1,11 @@
+-
+  var icons = [
+    ['vk', '//vk.com'],
+    ['github', '//github.com'],
+    ['in', '//linkedin.com']
+  ]
+  
 ul.socials
-  -
-    var icons = [
-      ['vk', '//vk.com'],
-      ['github', '//github.com'],
-      ['in', '//linkedin.com']
-    ]
-
   each icon in icons
     li.socials__item
       a(href=icon[1] target="_blank").socials__link
