@@ -25,7 +25,7 @@
   height: 45px;
   padding: 0 20px;
   font-family: "robotoregular";
-  @include fz($textSize);
+  font-size: $textSize;
   color: $textColorAccent;
   border: none;
   box-shadow: none;
@@ -41,25 +41,25 @@
   }
   ::-webkit-input-placeholder {
     font-family: "robotoregular";
-    @include fz($textSize);
+    font-size: $textSize;
     color: $textColorAccent;
     opacity: .5
   }
   ::-moz-placeholder {
     font-family: "robotoregular";
-    @include fz($textSize);
+    font-size: $textSize;
     color: $textColorAccent;
     opacity: .5
   }
   :-moz-placeholder {
     font-family: "robotoregular";
-    @include fz($textSize);
+    font-size: $textSize;
     color: $textColorAccent;
     opacity: .5
   }
   :-ms-input-placeholder {
     font-family: "robotoregular";
-    @include fz($textSize);
+    font-size: $textSize;
     color: $textColorAccent;
     opacity: .5
   }
@@ -106,7 +106,7 @@
   display: none;
   max-width: 100%;
   background-color: $errorColor;
-  @include fz(14px);
+  font-size: 14px;
   color: $textColorInvert;
   padding: 10px 20px;
   position: absolute;
@@ -173,7 +173,7 @@
   @extend %ibm;
   height: 13px;
   font-family: "robotoregular";
-  @include fz($textSize);
+  font-size: $textSize;
   color: $textColorInvert;
   opacity: .8;
   line-height: 13px;

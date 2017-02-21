@@ -1,5 +1,5 @@
 .block-title{
-  @include fz($subTtitleSize);
+  font-size: $subTitleSize;
   color: $textColor;
   font-family:"sansus_webissimoregular";
   text-transform: uppercase;

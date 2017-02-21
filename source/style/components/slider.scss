@@ -1,0 +1,121 @@
+.slider{
+  display: flex;
+  width: 100%;
+  height: 750px;
+}
+.slider__col{
+  width: 50%;
+  position: relative;
+}
+.slider__monitor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #e1e4d7;
+}
+.slider__img{
+  display: block;
+  max-width: 100%;
+}
+
+.slider__info{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  text-align: center;
+}
+.slider__info-title{
+  display: block;
+  width: 100%;
+}
+.slider__info-skils{
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: $color;
+  font-family:"robotoregular";
+  margin:0 auto 60px;
+}
+.show-link{
+  display: block;
+  width: 200px;
+  min-height: 45px;
+  padding:12px 20px;
+  font-size: 16px;
+  color: $textColorInvert;
+  font-family:"robotoregular";
+  text-decoration: none;
+  background-color: $color;
+  border-radius:22px;
+  @include trans();
+  margin: 0 auto;
+  &:hover{
+    background-color: $colorAccent;
+  }
+}
+.show-link__icon{
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 19px;
+  fill: $textColorInvert;
+  margin-right: 10px;
+}
+
+.slider__nav-bar{
+  display: flex;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.slider__nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, .15);
+    @include trans();
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &:hover{
+    &:before{
+      background-color: rgba(#000, .05);
+    }
+    .slider__nav-icon{
+      opacity: 1;
+    }
+  }
+}
+.slider__nav-img{
+  display: block;
+  max-width: 100%;
+}
+.slider__nav-icon{
+  width: 43px;
+  height: 27px;
+  position: absolute;
+  @include align(XY);
+  fill: $textColorInvert;
+  @include trans();
+  opacity: .6;
+}

@@ -5,17 +5,21 @@
     <title>About me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <!-- styles-->
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/main.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--scripts-->
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body class="body body_projects">
     <div class="layout">
-      <section class="first-sect"><img class="first-sect__bg" src="assets/img/water.jpg">
+      <section class="first-sect"><img class="first-sect__bg" src="assets/img/water.jpg" alt="img"><img class="first-sect__title-layer" src="assets/img/portfolio_header.png" alt="">
         <div class="wrapper">
           <div class="first-sect__user">
             <div class="user">
-              <div class="user__ava"><img class="user__img" src="userfiles/ava.jpg"></div>
+              <div class="user__ava"><img class="user__img" src="userfiles/ava.jpg" alt="img"></div>
               <div class="user__name">Виталик Суханов</div>
               <div class="user__descr">Личный сайт веб разработчика</div>
             </div>
@@ -50,66 +54,92 @@
         <div class="menue">
           <div class="wrapper">
             <nav class="nav">
-              <ul class="nav-list"></ul>
-              <li class="nav-list__item"><a class="nav-list__link" href="projects.html">Мои работы</a></li>
-              <li class="nav-list__item"><a class="nav-list__link" href="about.html">Обо мне</a></li>
-              <li class="nav-list__item"><a class="nav-list__link" href="blog.html">Блог</a></li>
-              <li class="nav-list__item"><a class="nav-list__link" href="login.html">Авторизация</a></li>
+              <ul class="nav-list">
+                <li class="nav-list__item"><a class="nav-list__link nav-list__link_active" href="projects.html">Мои работы</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="about.html">Обо мне</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="blog.html">Блог</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="login.html">Авторизация</a></li>
+              </ul>
             </nav>
             <button class="close-menue"></button>
           </div>
         </div>
       </section>
-      <section class="works">
+      <section class="section work-head">
         <svg class="both-head" viewbox="0 0 1800 180" preserveAspectRatio="none">
           <polygon points="0,180 0,0 900,180 1800,0 1800,180"></polygon>
         </svg>
         <h2 class="sect-title" style="background-image: url(&quot;assets/img/works_header.png&quot;);">Мои работы</h2>
-        <div class="works-slider"><img class="works-slider__img" src="assets/img/slider.jpg"></div>
+      </section>
+      <section class="section slider">
+        <div class="slider__col slider__col-left">
+          <div class="slider__monitor"><img class="slider__img" src="assets/img/slide.png"></div>
+          <div class="slider__info">
+            <div class="slider__info-title">
+              <h2 class="block-title">Сайт школы онлайн<br>Образования</h2>
+            </div>
+            <div class="slider__info-skils">HTML , CSS, JAVASCRIPT</div>
+            <div class="slider__info-btn"><a class="show-link" href="#">
+                <svg class="show-link__icon">
+                  <use xlink:href="assets/img/sprite.svg#link"></use>
+                </svg>Посмореть сайт</a></div>
+          </div>
+        </div>
+        <div class="slider__col slider__col-right">
+          <div class="slider__nav-bar"><a class="slider__nav slider__nav-left" href="#"><img class="slider__nav-img" src="assets/img/slide-prev.jpg">
+              <svg class="slider__nav-icon">
+                <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
+              </svg></a><a class="slider__nav slider__nav-right" href="#"><img class="slider__nav-img" src="assets/img/slide-next.jpg">
+              <svg class="slider__nav-icon">
+                <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+              </svg></a></div>
+        </div>
       </section>
       <section class="reviews" style="background-image: url(&quot;assets/img/about_bg.png&quot;);">
-        <h2 class="sect-title" style="background-image: url(&quot;assets/img/about_header.png&quot;);">Что обо мне<br>говорят</h2>
-        <ul class="review-list">
-          <li class="review-list__item">
-            <div class="review">
-              <div class="review__pic"><img class="review__img" src="userfiles/kovalchuk.jpg"></div>
-              <div class="review__text">
-                <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+        <div class="wrapper">
+          <h2 class="sect-title" style="background-image: url(&quot;assets/img/about_header.png&quot;);">Что обо мне<br>говорят</h2>
+          <ul class="review-list">
+            <li class="review-list__item">
+              <div class="review">
+                <div class="review__pic"><img class="review__img" src="userfiles/kovalchuk.jpg" alt="img"></div>
+                <div class="review__text">
+                  <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+                </div>
+                <div class="review__author">Ковальчук Дмитрий</div>
+                <div class="review__author-position">— основатель Loftschool</div>
               </div>
-              <div class="review__author">Ковальчук Дмитрий</div>
-              <div class="review__author-position">— основатель Loftschool</div>
-            </div>
-          </li>
-          <li class="review-list__item">
-            <div class="review">
-              <div class="review__pic"><img class="review__img" src="userfiles/sabancev.jpg"></div>
-              <div class="review__text">
-                <p>Этот код выдержит любые испытания. Только пожалуйста, не загружаете сайт на слишком старых браузерах!</p>
+            </li>
+            <li class="review-list__item">
+              <div class="review">
+                <div class="review__pic"><img class="review__img" src="userfiles/sabancev.jpg" alt="img"></div>
+                <div class="review__text">
+                  <p>Этот код выдержит любые испытания. Только пожалуйста, не загружаете сайт на слишком старых браузерах!</p>
+                </div>
+                <div class="review__author">Сабанцев Владимир</div>
+                <div class="review__author-position">— преподаватель</div>
               </div>
-              <div class="review__author">Сабанцев Владимир</div>
-              <div class="review__author-position">— преподаватель</div>
+            </li>
+          </ul>
+          <form class="form form_contact">
+            <h3 class="block-title">Связаться со мной</h3>
+            <label class="field">
+              <input class="field__input" type="text" name="name" placeholder="Имя"><span class="field__error">Введите логин</span>
+            </label>
+            <label class="field">
+              <input class="field__input" type="text" name="email" placeholder="Еmail"><span class="field__error">Введите пароль</span>
+            </label>
+            <label class="field">
+              <textarea class="field__input field__input_textarea" name="message" placeholder="Ваше сообщение"></textarea><span class="field__error">Введите пароль</span>
+            </label>
+            <div class="btns-panel">
+              <button class="btns-panel__item" type="submit">Отправить</button>
+              <button class="btns-panel__item" type="reset">Очистить</button>
             </div>
-          </li>
-        </ul>
-        <form class="form form_contact">
-          <h3 class="block-title">Связаться со мной</h3>
-          <label class="field">
-            <input class="field__input" type="text" name="name" placeholder="Имя"><span class="field__error">Введите логин</span>
-          </label>
-          <label class="field">
-            <input class="field__input" type="text" name="email" placeholder="Еmail"><span class="field__error">Введите пароль</span>
-          </label>
-          <label class="field">
-            <textarea class="field__input field__input_textarea" name="message" placeholder="Ваше сообщение"></textarea><span class="field__error">Введите пароль</span>
-          </label>
-          <div class="btns-panel">
-            <button class="btns-panel__item" type="submit">Отправить</button>
-            <button class="btns-panel__item" type="reset">Очистить</button>
-          </div>
-        </form><a class="scroll-link scroll-link_up" href="#">
-          <svg class="scroll-link__icon">
-            <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
-          </svg></a>
+          </form><a class="scroll-link scroll-link_up" href="#">
+            <svg class="scroll-link__icon">
+              <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
+            </svg></a>
+        </div>
       </section>
     </div>
     <footer class="footer">
@@ -158,6 +188,4 @@
       </div>
     </footer>
   </body>
-  <script src="assets/js/foundation.js" defer></script>
-  <script src="assets/js/app.js" defer></script>
 </html>

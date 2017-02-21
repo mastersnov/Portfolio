@@ -3,6 +3,8 @@
   height: 600px;
   overflow: hidden;
   position: relative;
+  background: center no-repeat;
+  background-size:contain;
   &:after{
     content: '';
     display: block;
@@ -23,6 +25,12 @@
   position: absolute;
   top: 0;
   @extend %hc;
+}
+
+.first-sect__title-layer{
+  max-width: 100%;
+  position: absolute;
+  @include align(XY);
 }
 
 .first-sect__socials{

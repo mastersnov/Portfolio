@@ -18,7 +18,7 @@
 }
 
 .footer-col__left{
-  @include fz($textSize);
+  font-size: $textSize;
   color: $textColorInvert;
   font-family:"robotolight";
   line-height:1.8;
@@ -33,7 +33,7 @@
 
 }
 .footer-nav__link{
-  @include fz($textSize);
+  font-size: $textSize;
   color: $textColorInvert;
   text-decoration: none;
   @include trans();
@@ -67,7 +67,7 @@
 }
 
 .footer-qote{
-  @include fz($textSize);
+  font-size: $textSize;
   color: rgba($textColorInvert, .5);
   font-family:"robotoitalic";
   line-height:1.8;

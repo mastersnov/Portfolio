@@ -31,7 +31,7 @@
   margin: 0 auto;
 }
 .review__text{
-  @include fz($textSize);
+  font-size: $textSize;
   color: #5d5a55;
   font-family:"robotoitalic";
   text-align: left;
@@ -57,7 +57,7 @@
   }
 }
 .review__author{
-  @include fz($textSize);
+  font-size: $textSize;
   color: $colorAccent;
   font-family:"robotoregular";
   margin-bottom: 10px;

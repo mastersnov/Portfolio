@@ -14,6 +14,7 @@ module.exports = function() {
         }
       }))
       .pipe($.gp.autoprefixer( $.config.autoprefixerConfig ))
+      .pipe($.gp.cssUnit( $.config.cssUnitConfig ))
       .pipe($.gp.sourcemaps.write())
       .pipe($.gulp.dest($.config.root + '/assets/css'))
       .pipe($.browserSync.stream());

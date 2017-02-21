@@ -5,7 +5,7 @@
   &:after{
     content: '';
     display: block;
-    width: 680px;
+    width: 77.27272727272727%;
     height: 5px;
     background-color: rgba(#373e42, .07);
     position: absolute;
@@ -15,7 +15,7 @@
 }
 
 .article__title{
-  @include fz($subTtitleSize);
+  font-size: $subTitleSize;
   color: $textColor;
   font-family:"sansus_webissimoregular";
   text-transform: uppercase;
@@ -24,13 +24,13 @@
 }
 
 .article__date{
-  @include fz($textSize);
+  font-size: $textSize;
   color: $color;
   font-family:"robotoregular";
   margin-bottom: 30px;
 }
 .article p{
-  @include fz($textSize);
+  font-size: $textSize;
   color: $textColor;
   font-family:"robotoregular";
   line-height: 1.5;

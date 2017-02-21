@@ -19,7 +19,7 @@
   }
 }
 .contacts-list__link{
-  @include fz($textSize);
+  font-size: $textSize;
   color: rgba($textColor, .8);
   text-decoration: none;
   @include trans();

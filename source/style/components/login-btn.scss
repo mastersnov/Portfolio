@@ -3,7 +3,7 @@
   height: 45px;
   border: 1px solid #fff;
   font-family: 'robotomedium';
-  @include fz(16px);
+  font-size: $textSize;
   text-decoration: none;
   color: $textColorInvert;
   @include trans();

@@ -10,5 +10,10 @@ module.exports = {
     open: true,
     notify: false,
     server: './build'
+  },
+
+  cssUnitConfig: {
+    type     :    'px-to-rem',
+    rootSize :    16
   }
 };

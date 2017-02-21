@@ -21,13 +21,13 @@
 
 .user__name {
   color: $textColorInvert;
-  @include fz($subTtitleSize);
+  font-size: $subTitleSize;
   font-family: 'robotomedium';
   margin-bottom: 10px;
 }
 
 .user__descr {
   color: $textColorInvert;
-  @include fz($textSize);
+  font-size: $textSize;
   font-family: 'robotoregular';
 }

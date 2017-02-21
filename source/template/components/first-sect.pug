@@ -1,16 +1,35 @@
 section.first-sect
-  img.first-sect__bg(src=("assets/img/water.jpg"))
-  .wrapper
-    .first-sect__user
-      include ../components/user
+  img.first-sect__bg(src=("assets/img/water.jpg") alt="img")
+  if page != 'blog'
+    img.first-sect__title-layer(src=("assets/img/portfolio_header.png") alt="")
+    .wrapper
+      .first-sect__user
+        include ../components/user
 
-    .first-sect__socials
-      include ../components/socials
+      .first-sect__socials
+        include ../components/socials
 
-    .first-sect__burger
-      button.burger
-        + svg('burger-icon', 'hamburger')
+      .first-sect__burger
+        button.burger
+          + svg('burger-icon', 'hamburger')
 
-    a(href="#").scroll-link.scroll-link_down
-      + svg('scroll-link__icon', 'arrow_down')
-  include ../components/menue
+      a(href="#").scroll-link.scroll-link_down
+        + svg('scroll-link__icon', 'arrow_down')
+
+    include ../components/menue
+  else
+    .wrapper
+      .first-sect__user
+        include ../components/user
+
+      .first-sect__socials
+        include ../components/socials
+
+      .first-sect__burger
+        button.burger
+          + svg('burger-icon', 'hamburger')
+
+      a(href="#").scroll-link.scroll-link_down
+        + svg('scroll-link__icon', 'arrow_down')
+
+    include ../components/menue

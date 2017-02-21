@@ -5,17 +5,21 @@
     <title>About me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <!-- styles-->
     <link rel="stylesheet" href="assets/css/foundation.css">
-    <link rel="stylesheet" href="assets/css/main.css"><!--[if lt IE 9]>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--scripts-->
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body class="body body_about">
     <div class="layout">
-      <section class="first-sect"><img class="first-sect__bg" src="assets/img/water.jpg">
+      <section class="first-sect"><img class="first-sect__bg" src="assets/img/water.jpg" alt="img"><img class="first-sect__title-layer" src="assets/img/portfolio_header.png" alt="">
         <div class="wrapper">
           <div class="first-sect__user">
             <div class="user">
-              <div class="user__ava"><img class="user__img" src="userfiles/ava.jpg"></div>
+              <div class="user__ava"><img class="user__img" src="userfiles/ava.jpg" alt="img"></div>
               <div class="user__name">Виталик Суханов</div>
               <div class="user__descr">Личный сайт веб разработчика</div>
             </div>
@@ -50,11 +54,12 @@
         <div class="menue">
           <div class="wrapper">
             <nav class="nav">
-              <ul class="nav-list"></ul>
-              <li class="nav-list__item"><a class="nav-list__link" href="projects.html">Мои работы</a></li>
-              <li class="nav-list__item"><a class="nav-list__link" href="about.html">Обо мне</a></li>
-              <li class="nav-list__item"><a class="nav-list__link" href="blog.html">Блог</a></li>
-              <li class="nav-list__item"><a class="nav-list__link" href="login.html">Авторизация</a></li>
+              <ul class="nav-list">
+                <li class="nav-list__item"><a class="nav-list__link" href="projects.html">Мои работы</a></li>
+                <li class="nav-list__item"><a class="nav-list__link nav-list__link_active" href="about.html">Обо мне</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="blog.html">Блог</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="login.html">Авторизация</a></li>
+              </ul>
             </nav>
             <button class="close-menue"></button>
           </div>
@@ -66,8 +71,8 @@
             <polygon points="0,0 0,180 900,180"></polygon>
           </svg>
           <div class="about-content">
-            <h2 class="sect-title" style="background-image: url(&quot;assets/img/about_header.png&quot;);">Обо мне</h2>
-            <h3 class="block-title">Кто я</h3><img class="block-img" src="userfiles/av.jpg">
+            <h2 class="sect-title" style="background-image: url(&quot;assets/img/about_header.png&quot;);">Обо мне</h2><img class="block-img" src="userfiles/av.jpg" alt="img">
+            <h3 class="block-title">Кто я</h3>
             <div class="block-text">
               <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
               <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
@@ -364,6 +369,4 @@
       </div>
     </footer>
   </body>
-  <script src="assets/js/foundation.js" defer></script>
-  <script src="assets/js/app.js" defer></script>
 </html>

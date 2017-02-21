@@ -29,11 +29,11 @@
 
 .about-content{
   position: relative;
-  padding:0 20px 0 440px;
+  padding:20px 20px 0 40%;
   .sect-title{
     position: absolute;
     top: -50px;
-    left: 50px;
+    left: 0;
   }
 }
 
@@ -44,6 +44,6 @@
 }
 .block-text{
   color: $textColor;
-  @include fz($textSize);
+  font-size: $textSize;
   line-height: 1.5;
 }

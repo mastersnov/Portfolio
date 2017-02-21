@@ -4,7 +4,7 @@
   padding: 10px 0;
 }
 .copyright{
-  @include fz($textSize);
+  font-size: $textSize;
   color: $textColorInvert;
   font-family:"robotoregular";
 }

@@ -7,6 +7,10 @@
   ]
 
 ul.anchors
-  each anchor in anchors
-    li.anchors__item
-      a(href=anchor[1]).anchors__link=anchor[0]
+  each anchor, ndx in anchors
+    if ndx == 0
+      li.anchors__item
+        a(href=anchor[1]).anchors__link.anchors__link_active=anchor[0]
+    else
+      li.anchors__item
+        a(href=anchor[1]).anchors__link=anchor[0]

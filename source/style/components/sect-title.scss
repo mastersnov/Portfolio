@@ -1,6 +1,6 @@
 .sect-title{
   display: inline-block;
-  @include fz($titleSize);
+  font-size: $titleSize;
   color: $textColorAccent;
   font-family:"sansus_webissimoregular";
   text-transform: uppercase;

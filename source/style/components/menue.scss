@@ -23,23 +23,43 @@
 .nav-list__link{
   display: inline-block;
   padding: 45px 0;
-  @include fz($titleSize);
+  font-size: $titleSize;
   color: $textColorInvert;
   font-family:"sansus_webissimoregular";
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  position: relative;
+  @include trans();
+  &_active{
+    &:after{
+      content: '';
+      display: block;
+      width: 90px;
+      height: 3px;
+      background-color: $textColorInvert;
+      position: absolute;
+      bottom: 30px;
+      @include align(X);
+    }
+    &:hover{
+      &:after{
+        background-color: $textColorAccent;
+      }
+    }
+  }
   &:hover{
     color: $textColorAccent;
   }
 }
 .close-menue{
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 30px;
   right: 30px;
+  border-radius: 2px;
   @extend %reset;
   overflow: hidden;
   cursor: pointer;
@@ -50,6 +70,7 @@
     width: 4px;
     height: 200%;
     background-color: $textColorInvert;
+    @include trans();
     position: absolute;
     top: 0;
     transform-origin: 0 0;
@@ -61,5 +82,10 @@
   &:after{
     right: -2px;
     transform: rotate(45deg);
+  }
+  &:hover{
+    &:before,&:after{
+      background-color: $textColorAccent;
+    }
   }
 }
