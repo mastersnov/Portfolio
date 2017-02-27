@@ -20,14 +20,30 @@
 }
 
 .user__name {
-  color: $textColorInvert;
-  font-size: $subTitleSize;
   font-family: 'robotomedium';
   margin-bottom: 10px;
+  @include phones{
+    font-size: 21px;
+  }
+  .sect-title{
+    color: $textColorInvert;
+    &:after{
+      background-color: $textColorInvert;
+    }
+  }
+  .block-title{
+    color: $textColorInvert;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    &:after{
+      display: none;
+
+    }
+  }
 }
 
 .user__descr {
-  color: $textColorInvert;
-  font-size: $textSize;
-  font-family: 'robotoregular';
+  .block-text{
+    color: $textColorInvert;
+  }
 }

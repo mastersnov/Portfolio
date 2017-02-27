@@ -3,13 +3,34 @@
   padding-top: 20px;
   text-align: center;
   background: #f4f5f0 center bottom no-repeat;
-  background-size:contain;
+  background: none!important;
   position: relative;
-  .form_contact{
-    margin: 0 auto;
-  }
   .scroll-link_up{
-    bottom: 225px;
-    transform: translateX(-50%) rotateZ(180deg);
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: rotate(180deg);
+  }
+}
+.form_contact {
+  margin: 0 auto;
+}
+
+
+.reviews__title{
+  @include tablets{
+    margin-bottom: 20px;
+  }
+}
+
+.reviews__scroll{
+  position: absolute;
+  bottom: 250px;
+  @include align(X);
+  @include desktops{
+    bottom: 350px;
+  }
+  @include phones{
+    bottom: 50px;
   }
 }

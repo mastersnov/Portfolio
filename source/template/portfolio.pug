@@ -3,12 +3,12 @@ include components/_mixins
 
 doctype html
 html
-    head
-        include components/head
+  head
+    include components/head
 
-    body.body(class=`body_${page}`)
-        .layout
-            block content
+  body.body(class=`body_${page}`)
+    .layout
+      block content
 
-        footer.footer
-            include components/footer
+    footer.footer
+      include components/footer

@@ -7,14 +7,20 @@ block variables
 
 block content
   .content
-    .first-info
-      include ../components/user
+    a(href="login.html").login-btn Авторизироваться
 
-      include ../components/socials
+    .flip-container
+      .flipper
+        .flipper__front
+          .first-info
+            include ../components/user
 
-      nav.btns-panel
-        a(href="projects.html").btns-panel__item Мои работы
-        a(href="about.html").btns-panel__item Обо мне
-        a(href="blog.html").btns-panel__item Блог
+            include ../components/socials
 
-    a(href="login.html").login-btn.login-btn__fixed Авторизироваться
+            nav.btns-panel
+              a(href="projects.html").btns-panel__item Мои работы
+              a(href="about.html").btns-panel__item Обо мне
+              a(href="blog.html").btns-panel__item Блог
+
+        .flipper__back
+          include ../components/form_login

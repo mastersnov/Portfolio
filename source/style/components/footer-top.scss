@@ -1,19 +1,36 @@
-.footer{
-
-}
 .footer__top{
   background: rgba( $textColorAccent, .85);
   padding: 30px 0;
   .wrapper{
     display: flex;
   }
+  @include tablets{
+    .wrapper{
+      flex-wrap: wrap;
+    }
+  }
+  @include phones{
+    padding: 0 2.5%;
+  }
 }
 .footer-col{
   width: 33%;
-  padding: 0 30px;
+  padding: 0 2.5%;
   border-right:1px solid $textColorInvert;
   &:last-child{
     border-right:none;
+  }
+  @include desktops{
+    padding: 0 2%;
+  }
+  @include phones{
+    padding:20px 3.125%;
+    border-right:none;
+    border-bottom:1px solid $textColorInvert;
+    text-align: center;
+    &:last-child{
+      border-bottom:none;
+    }
   }
 }
 
@@ -22,42 +39,35 @@
   color: $textColorInvert;
   font-family:"robotolight";
   line-height:1.8;
-}
-
-.footer-nav{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.footer-nav__item{
-
-}
-.footer-nav__link{
-  font-size: $textSize;
-  color: $textColorInvert;
-  text-decoration: none;
-  @include trans();
-  &:hover{
-    color: $colorAccent;
+  @include tablets{
+    width: 50%;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+  @include phones{
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
-.footer-nav__item{
-  display: inline-block;
-  vertical-align: top;
-  margin-right:6.666666666666667%;
-  &:last-child{
-    margin-right: 0;
-  }
-}
+
 .footer-col__center{
-  .footer-nav__item{
-    margin-bottom: 25px;
+  @include tablets{
+    width: 50%;
+    border-right:none;
+    margin-bottom: 50px;
   }
+  @include phones{
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.footer__navigation{
+  margin-bottom: 20px;
 }
 
 .footer__socials{
-  text-align: center;
   .socials__link{
     opacity: .5;
     &:hover{
@@ -66,15 +76,8 @@
   }
 }
 
-.footer-qote{
-  font-size: $textSize;
-  color: rgba($textColorInvert, .5);
-  font-family:"robotoitalic";
-  line-height:1.8;
-  padding: 0;
-  margin: 0;
-}
-.footer-quote__source{
-  display: block;
-  font-family:"robotobold_italic";
+.footer-col__right{
+  @include tablets{
+    width: 100%;
+  }
 }

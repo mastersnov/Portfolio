@@ -2,10 +2,11 @@
   font-size: $subTitleSize;
   color: $textColor;
   font-family:"sansus_webissimoregular";
+  line-height: 1;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto 30px;
   padding:0 0 30px;
+  margin: 0 auto 30px;
   position: relative;
   &:after {
     content: '';
@@ -15,6 +16,16 @@
     height: 3px;
     position: absolute;
     bottom: -1px;
-    @extend %hc;
+    @include align(X);
+  }
+  @include desktops {
+    padding:0 0 20px;
+    margin: 0 auto 20px;
+  }
+  @include tablets{
+    font-size: 30px;
+  }
+  @include phones{
+    font-size: 21px;
   }
 }

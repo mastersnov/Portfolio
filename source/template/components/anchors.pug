@@ -1,16 +1,15 @@
 -
   var anchors = [
-    ['Самое важное в SASS', '#topic1'],
-    ['Приёмы в вёрстке, без которых не обходится ни один сайт', '#topic2'],
-    ['Самый необходимый набор Gulp плагинов', '#topic3'],
-    ['Почему я выбрал Jade', '#topic4']
+    ['Самое важное в SASS'],
+    ['Приёмы в вёрстке, без которых не обходится ни один сайт'],
+    ['Самый необходимый набор Gulp плагинов'],
+    ['Почему я выбрал Jade']
   ]
 
 ul.anchors
   each anchor, ndx in anchors
     if ndx == 0
-      li.anchors__item
-        a(href=anchor[1]).anchors__link.anchors__link_active=anchor[0]
+      li.anchors__item.anchors__item_active=anchor[0]
     else
-      li.anchors__item
-        a(href=anchor[1]).anchors__link=anchor[0]
+      li.anchors__item=anchor[0]
+span.toogle-anchors

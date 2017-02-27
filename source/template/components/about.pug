@@ -1,12 +1,14 @@
 section.sect.about
   .about__col.about__col_left
-    svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle
+    svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle.about__triangle_left
       polygon(points="0,0 0,180 900,180")
 
-    include ../components/about-content
+    .about__col-content
+      include about-yourself
 
   .about__col.about__col_right
-    svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle
+    svg(viewbox="0 0 900 180" preserveAspectRatio="none").about__triangle.about__triangle_right
       polygon(points="900,0 900,180 0,180")
 
-    include ../components/skills
+    .about__col-content
+      include ../components/skills

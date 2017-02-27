@@ -1,27 +1,92 @@
+.wrap-anchors {
+  position: relative;
+  top: 0;
+  &.fixed {
+    width: 100%;
+    max-width: 290px;
+    left: 5.7%;
+  }
+  @include desktops{
+    &.fixed{
+      left: 2%;
+    }
+  }
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
 .anchors{
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.anchors__item{
-  display: block;
+  position: relative;
   text-align: right;
-  &+&{
-    margin-top: 15px;
+  @include tablets{
+    position: absolute;
+    @include align(Y);
   }
 }
-.anchors__link{
+.anchors__item{
   display: inline-block;
   font-size: $textSize;
   color: $textColor;
-  text-decoration: none;
+  font-family:"robotomedium";
   padding: 15px 20px 15px 0;
   @include trans();
+  cursor: pointer;
+
   &_active{
     color: $colorAccent;
     border-right:3px solid $colorAccent;
   }
   &:hover{
     color: $colorAccent;
+  }
+  &+&{
+    margin-top: 15px;
+  }
+
+  @include tablets{
+    color: $textColorInvert;
+    opacity: .8;
+    &_active{
+      opacity: 1;
+    }
+    &:hover{
+      opacity: 1;
+      color: $textColorInvert;
+    }
+  }
+}
+//.anchors__link{
+//  display: inline-block;
+//  font-size: $textSize;
+//  color: $textColor;
+//  text-decoration: none;
+//  padding: 15px 20px 15px 0;
+//  @include trans();
+//  &_active{
+//    color: $colorAccent;
+//    border-right:3px solid $colorAccent;
+//  }
+//  &:hover{
+//    color: $colorAccent;
+//  }
+//}
+.toogle-anchors {
+  display: none;
+  width: 20px;
+  height: 40px;
+  border-radius:0 50% 50% 0;
+  background-color: $colorAccent;
+  position: absolute;
+  @include align(Y);
+  left: calc(100% - 1px);
+  z-index: 100;
+  cursor: pointer;
+  @include tablets{
+    display: block;
   }
 }

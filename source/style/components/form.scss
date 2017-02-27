@@ -1,6 +1,10 @@
 .form {
   @extend %likeForm;
   padding: 40px 20px 65px;
+  @include phones{
+    width: 95%;
+    padding: 40px 0 65px;
+  }
 }
 
 
@@ -98,7 +102,7 @@
   opacity: .5;
   position: absolute;
   left: 15px;
-  @extend %vc;
+  @include align(Y);
   @include trans();
 }
 
@@ -111,7 +115,7 @@
   padding: 10px 20px;
   position: absolute;
   top: calc(100% + 10px);
-  @extend %hc;
+  @include align(X);
   z-index: 1;
   &:before {
     content: '';
@@ -123,7 +127,7 @@
     border-bottom: 10px solid $errorColor;
     position: absolute;
     bottom: 100%;
-    @extend %hc;
+    @include align(X);
   }
 }
 
@@ -229,7 +233,7 @@
     background-color: $color;
     border-radius: 50%;
     position: absolute;
-    @extend %vhc;
+    @include align(XY);
     z-index: 1;
   }
   &:checked {
@@ -245,7 +249,7 @@
 
 
 .form_contact{
-  background: rgba(#e0e0dc, .6);
+  //background: rgba(#e0e0dc, .6);
 }
 
 .form_login {

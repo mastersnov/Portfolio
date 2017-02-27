@@ -4,4 +4,14 @@
 .map{
   width: 100%;
   height: 1110px;
+  padding-bottom: 185px;
+  @include desktops{
+    padding-bottom: 266px;
+  }
+  @include tablets{
+    padding-bottom: 304px;
+  }
+  @include phones{
+    padding-bottom: 429px;
+  }
 }

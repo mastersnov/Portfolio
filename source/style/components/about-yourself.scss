@@ -1,0 +1,67 @@
+.about-yourself{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: relative;
+  @include desktops{
+    display: block;
+  }
+  @include tablets{
+    padding: 25px 0 30px;
+  }
+  @include phones{
+    padding-top: 0;
+  }
+}
+
+.about-yourself__title{
+  margin-top: -50px;
+  @include desktops {
+    text-align: center;
+  }
+  @include tablets{
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.about-yourself__content{
+  width: 100%;
+  max-width: 445px;
+  margin: 10px 20px 0 0 ;
+  @include desktops{
+    width:74.16666666666667%;
+    margin: 0 auto;
+  }
+  @include tablets{
+    width:61.19791666666667%;
+    max-width: 470px;
+  }
+  @include phones{
+    width: 95%;
+    max-width: none;
+  }
+}
+
+.about-yourself__pcture{
+  display: block;
+  margin: 0 auto 40px;
+  @include tablets{
+    margin:0 auto 50px;
+  }
+}
+.block-img{
+  display: block;
+  max-width: 100%;
+}
+.block-text{
+  color: $textColor;
+  font-size: $textSize;
+  line-height: 1.5;
+  @include tablets{
+    font-size: 14px;
+  }
+  @include phones{
+    padding: 0 2.5%;
+  }
+}

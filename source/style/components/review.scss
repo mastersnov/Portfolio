@@ -7,13 +7,26 @@
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+  @include phones{
+    margin: 0 0 40px;
+  }
 }
 .review-list__item{
   display: inline-block;
   vertical-align: top;
-  width: 100%;
+  width: 50%;
   max-width: 380px;
-  margin:0 10px;
+  padding:0 10px;
+  @include tablets{
+    padding:0 3.125%;
+  }
+  @include phones{
+    width: 100%;
+    max-width: none;
+    &+&{
+      margin-top: 40px;
+    }
+  }
 }
 .review{
 

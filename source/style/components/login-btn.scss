@@ -1,4 +1,5 @@
 .login-btn {
+  display: block;
   width: 180px;
   height: 45px;
   border: 1px solid #fff;
@@ -14,13 +15,24 @@
   outline: none;
   border-radius: 22px;
   cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 5.555555555555556%;
+  z-index: 10;
   &:hover {
     border-color: $colorAccent;
     background-color: $colorAccent;
   }
-  &__fixed{
-    position: absolute;
-    top: 25px;
-    right: 5.555555555555556%;
+
+  &.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @include tablets{
+    position: relative;
+    margin:20px auto;
+    top: auto;
+    right: auto;
   }
 }

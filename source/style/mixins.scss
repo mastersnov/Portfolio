@@ -14,6 +14,7 @@ $textSize: 16px;
 $footerHeight: 185px;
 //MIXINS
 
+
 @mixin align( $axis ){
   @if($axis == X){
     left: 50%;
@@ -46,22 +47,22 @@ $footerHeight: 185px;
   opacity:$percent;
 }
 
-@mixin desktop{
+@mixin desktops {
   @media (max-width: 1200px) {
     @content
   }
 }
-@mixin laptop{
+@mixin laptops {
   @media (max-width: 992px) {
     @content
   }
 }
-@mixin tablet{
+@mixin tablets {
   @media (max-width: 768px) {
     @content
   }
 }
-@mixin phone{
+@mixin phones {
   @media (max-width: 480px) {
     @content
   }
@@ -76,28 +77,13 @@ $footerHeight: 185px;
 //PLACEHOLDERS
 
 %likeForm {
+  display: block;
   width: 100%;
   max-width: 380px;
   padding: 40px 20px;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
-}
-
-%vhc {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-%vc {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-%hc {
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 %ibm {
@@ -113,5 +99,12 @@ $footerHeight: 185px;
   background: transparent;
   outline: none;
   text-decoration: none;
+}
+%clear{
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 ///////////////////////////////////////////////////////////////////

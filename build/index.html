@@ -14,30 +14,78 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body class="body body_welcome">
+    <div class="parallax-mouse">
+      <div class="parallax-mouse__layer"><img src="assets/img/water.jpg" alt="img"></div>
+    </div>
     <div class="layout">
-      <div class="content">
-        <div class="first-info">
-          <div class="user">
-            <div class="user__ava"><img class="user__img" src="userfiles/ava.jpg" alt="img"></div>
-            <div class="user__name">Виталик Суханов</div>
-            <div class="user__descr">Личный сайт веб разработчика</div>
+      <div class="content"><a class="login-btn" href="login.html">Авторизироваться</a>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="flipper__front">
+              <div class="first-info">
+                <div class="user">
+                  <div class="user__ava"><img class="user__img" src="userfiles/ava.jpg" alt="img"></div>
+                  <div class="user__name">
+                    <h3 class="block-title">Виталик Суханов</h3>
+                  </div>
+                  <div class="user__descr">
+                    <div class="block-text">Личный сайт веб разработчика</div>
+                  </div>
+                </div>
+                <ul class="socials">
+                  <li class="socials__item"><a class="socials__link" href="//vk.com" target="_blank">
+                      <svg class="socials__icon">
+                        <use xlink:href="assets/img/sprite.svg#vk"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link" href="//github.com" target="_blank">
+                      <svg class="socials__icon">
+                        <use xlink:href="assets/img/sprite.svg#github"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="socials__link" href="//linkedin.com" target="_blank">
+                      <svg class="socials__icon">
+                        <use xlink:href="assets/img/sprite.svg#in"></use>
+                      </svg></a></li>
+                </ul>
+                <nav class="btns-panel"><a class="btns-panel__item" href="projects.html">Мои работы</a><a class="btns-panel__item" href="about.html">Обо мне</a><a class="btns-panel__item" href="blog.html">Блог</a></nav>
+              </div>
+            </div>
+            <div class="flipper__back">
+              <form class="form form_login">
+                <h3 class="block-title">Авторизуйтесь</h3>
+                <label class="field">
+                  <input class="field__input" type="text" name="loogin" placeholder="Логин">
+                  <svg class="field__icon field__icon_login">
+                    <use xlink:href="assets/img/sprite.svg#login"></use>
+                  </svg><span class="field__error">Введите логин</span>
+                </label>
+                <label class="field">
+                  <input class="field__input" type="text" name="password" placeholder="Пароль">
+                  <svg class="field__icon field__icon_pas">
+                    <use xlink:href="assets/img/sprite.svg#password"></use>
+                  </svg><span class="field__error">Введите пароль</span>
+                </label>
+                <label class="check">
+                  <input class="checkbox" type="checkbox" name="human">
+                  <svg class="check__icon">
+                    <use xlink:href="assets/img/sprite.svg#check"></use>
+                  </svg><span class="check__label">Я человек</span>
+                </label>
+                <div class="radio-gorup">
+                  <div class="radio-group__title">Вы точно не робот?</div>
+                  <label class="radio">
+                    <input class="radiobox" type="radio" name="sure"><span class="radio-label">Да</span>
+                  </label>
+                  <label class="radio">
+                    <input class="radiobox" type="radio" name="sure" checked><span class="radio-label">Не уверен</span>
+                  </label>
+                </div>
+                <div class="btns-panel"><a class="btns-panel__item go-index" href="index.html">На главную</a>
+                  <button class="btns-panel__item" type="submit">Войти</button>
+                </div>
+              </form>
+            </div>
           </div>
-          <ul class="socials">
-            <li class="socials__item"><a class="socials__link" href="//vk.com" target="_blank">
-                <svg class="socials__icon">
-                  <use xlink:href="assets/img/sprite.svg#vk"></use>
-                </svg></a></li>
-            <li class="socials__item"><a class="socials__link" href="//github.com" target="_blank">
-                <svg class="socials__icon">
-                  <use xlink:href="assets/img/sprite.svg#github"></use>
-                </svg></a></li>
-            <li class="socials__item"><a class="socials__link" href="//linkedin.com" target="_blank">
-                <svg class="socials__icon">
-                  <use xlink:href="assets/img/sprite.svg#in"></use>
-                </svg></a></li>
-          </ul>
-          <nav class="btns-panel"><a class="btns-panel__item" href="projects.html">Мои работы</a><a class="btns-panel__item" href="about.html">Обо мне</a><a class="btns-panel__item" href="blog.html">Блог</a></nav>
-        </div><a class="login-btn login-btn__fixed" href="login.html">Авторизироваться</a>
+        </div>
       </div>
     </div>
     <footer class="footer footer_welcome">

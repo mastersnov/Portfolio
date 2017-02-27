@@ -3,7 +3,13 @@
   padding: 40px;
   background-color: rgba(#f4f5f0, .85);
   position: absolute;
-  @extend %vhc;
+  @include align(XY);
+  @include phones{
+    max-width: none;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
 }
 .contacts-list{
   margin: 0;
@@ -33,5 +39,5 @@
   fill: $colorAccent;
   position: absolute;
   left: 0;
-  @extend %vc;
+  @include align(Y);
 }

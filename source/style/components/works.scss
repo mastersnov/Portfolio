@@ -5,4 +5,7 @@
   .both-head{
     fill: #f8f9f5;
   }
+  @include tablets{
+    padding-bottom: 30px;
+  }
 }

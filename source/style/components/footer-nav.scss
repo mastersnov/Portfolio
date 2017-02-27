@@ -1,0 +1,30 @@
+.footer-nav{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include phones{
+    justify-content: center;
+  }
+}
+.footer-nav__item{
+  display: inline-block;
+  vertical-align: top;
+  margin-right:5%;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.footer-nav__link{
+  font-size: $textSize;
+  color: $textColorInvert;
+  text-decoration: none;
+  @include trans();
+  &:hover{
+    color: $colorAccent;
+  }
+  @include tablets{
+    font-size: 14px;
+  }
+}

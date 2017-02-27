@@ -25,4 +25,8 @@
   fill: #fff;
   @include trans();
   backface-visibility: hidden;
+  @include phones{
+    width: 24px;
+    height: 13px;
+  }
 }

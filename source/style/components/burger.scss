@@ -11,4 +11,80 @@
   &:hover{
     fill: $colorAccent;
   }
+  @include phones{
+    width: 26px;
+    height: 23px;
+  }
+}
+
+.toogle-menu{
+  display: block;
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+  @extend %reset;
+  position: relative;
+  @include trans();
+  &:hover{
+    .toogle-menu__line{
+      background-color:$colorAccent;
+    }
+  }
+  &.is-active {
+    &:hover{
+      .toogle-menu__line{
+        background-color:$textColorAccent;
+      }
+    }
+    .toogle-menu__line_top {
+      transform: translateY(15px) translateX(0) rotate(45deg);
+    }
+    .toogle-menu__line_middle {
+      display: none;
+    }
+
+    .toogle-menu__line_bottom {
+      transform: translateY(-15px) translateX(0) rotate(-45deg);
+    }
+  }
+
+  @include tablets{
+    width: 26px;
+    height: 23px;
+
+    &.is-active {
+      .toogle-menu__line_top {
+        transform: translateY(10px) translateX(0) rotate(45deg);
+      }
+      .toogle-menu__line_bottom {
+        transform: translateY(-10px) translateX(0) rotate(-45deg);
+      }
+    }
+  }
+}
+.toogle-menu__line{
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius:2px;
+  background-color: $textColorInvert;
+  position: absolute;
+  left: 0;
+  @include trans();
+  &_top{
+    top: 0;
+  }
+  &_middle{
+    top: 15px;
+  }
+  &_bottom{
+    bottom: 0;
+  }
+
+  @include tablets{
+    height: 3px;
+    &_middle{
+      top: 10px;
+    }
+  }
 }

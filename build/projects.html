@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>About me</title>
+    <title>My projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <!-- styles-->
@@ -15,13 +15,19 @@
   </head>
   <body class="body body_projects">
     <div class="layout">
-      <section class="first-sect"><img class="first-sect__bg" src="assets/img/water.jpg" alt="img"><img class="first-sect__title-layer" src="assets/img/portfolio_header.png" alt="">
+      <section class="first-sect">
+        <div class="first-sect__bg"><img class="first-sect__bg-img" src="assets/img/water.jpg" alt="img"></div>
+        <div class="first-sect__text-layer"><img class="first-sect__text-img" src="assets/img/portfolio_header.png" alt=""></div>
         <div class="wrapper">
           <div class="first-sect__user">
             <div class="user">
               <div class="user__ava"><img class="user__img" src="userfiles/ava.jpg" alt="img"></div>
-              <div class="user__name">Виталик Суханов</div>
-              <div class="user__descr">Личный сайт веб разработчика</div>
+              <div class="user__name">
+                <h3 class="block-title">Виталик Суханов</h3>
+              </div>
+              <div class="user__descr">
+                <div class="block-text">Личный сайт веб разработчика</div>
+              </div>
             </div>
           </div>
           <div class="first-sect__socials">
@@ -41,27 +47,25 @@
             </ul>
           </div>
           <div class="first-sect__burger">
-            <button class="burger">
-              <svg class="burger-icon">
-                <use xlink:href="assets/img/sprite.svg#hamburger"></use>
-              </svg>
-            </button>
+            <!--button.burger-->
+            <!--  + svg('burger-icon', 'hamburger')-->
+            <button class="toogle-menu"><span class="toogle-menu__line toogle-menu__line_top"></span><span class="toogle-menu__line toogle-menu__line_middle"></span><span class="toogle-menu__line toogle-menu__line_bottom"></span></button>
           </div><a class="scroll-link scroll-link_down" href="#">
             <svg class="scroll-link__icon">
               <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
             </svg></a>
-        </div>
-        <div class="menue">
-          <div class="wrapper">
-            <nav class="nav">
-              <ul class="nav-list">
-                <li class="nav-list__item"><a class="nav-list__link nav-list__link_active" href="projects.html">Мои работы</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="about.html">Обо мне</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="blog.html">Блог</a></li>
-                <li class="nav-list__item"><a class="nav-list__link" href="login.html">Авторизация</a></li>
-              </ul>
-            </nav>
-            <button class="close-menue"></button>
+          <div class="menu">
+            <div class="wrapper">
+              <nav class="nav">
+                <ul class="nav-list">
+                  <li class="nav-list__item"><a class="nav-list__link nav-list__link_active" href="projects.html">Мои работы</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="about.html">Обо мне</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="blog.html">Блог</a></li>
+                  <li class="nav-list__item"><a class="nav-list__link" href="index.html">Авторизация</a></li>
+                </ul>
+              </nav>
+              <!--button.close-menu-->
+            </div>
           </div>
         </div>
       </section>
@@ -76,7 +80,7 @@
           <div class="slider__monitor"><img class="slider__img" src="assets/img/slide.png"></div>
           <div class="slider__info">
             <div class="slider__info-title">
-              <h2 class="block-title">Сайт школы онлайн<br>Образования</h2>
+              <h2 class="block-title">Сайт школы онлайн Образования</h2>
             </div>
             <div class="slider__info-skils">HTML , CSS, JAVASCRIPT</div>
             <div class="slider__info-btn"><a class="show-link" href="#">
@@ -96,50 +100,57 @@
         </div>
       </section>
       <section class="reviews" style="background-image: url(&quot;assets/img/about_bg.png&quot;);">
-        <div class="wrapper">
+        <div class="reviews__title">
           <h2 class="sect-title" style="background-image: url(&quot;assets/img/about_header.png&quot;);">Что обо мне<br>говорят</h2>
-          <ul class="review-list">
-            <li class="review-list__item">
-              <div class="review">
-                <div class="review__pic"><img class="review__img" src="userfiles/kovalchuk.jpg" alt="img"></div>
-                <div class="review__text">
-                  <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
-                </div>
-                <div class="review__author">Ковальчук Дмитрий</div>
-                <div class="review__author-position">— основатель Loftschool</div>
+        </div>
+        <ul class="review-list">
+          <li class="review-list__item">
+            <div class="review">
+              <div class="review__pic"><img class="review__img" src="userfiles/kovalchuk.jpg" alt="img"></div>
+              <div class="review__text">
+                <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
               </div>
-            </li>
-            <li class="review-list__item">
-              <div class="review">
-                <div class="review__pic"><img class="review__img" src="userfiles/sabancev.jpg" alt="img"></div>
-                <div class="review__text">
-                  <p>Этот код выдержит любые испытания. Только пожалуйста, не загружаете сайт на слишком старых браузерах!</p>
-                </div>
-                <div class="review__author">Сабанцев Владимир</div>
-                <div class="review__author-position">— преподаватель</div>
-              </div>
-            </li>
-          </ul>
-          <form class="form form_contact">
-            <h3 class="block-title">Связаться со мной</h3>
-            <label class="field">
-              <input class="field__input" type="text" name="name" placeholder="Имя"><span class="field__error">Введите логин</span>
-            </label>
-            <label class="field">
-              <input class="field__input" type="text" name="email" placeholder="Еmail"><span class="field__error">Введите пароль</span>
-            </label>
-            <label class="field">
-              <textarea class="field__input field__input_textarea" name="message" placeholder="Ваше сообщение"></textarea><span class="field__error">Введите пароль</span>
-            </label>
-            <div class="btns-panel">
-              <button class="btns-panel__item" type="submit">Отправить</button>
-              <button class="btns-panel__item" type="reset">Очистить</button>
+              <div class="review__author">Ковальчук Дмитрий</div>
+              <div class="review__author-position">— основатель Loftschool</div>
             </div>
-          </form><a class="scroll-link scroll-link_up" href="#">
+          </li>
+          <li class="review-list__item">
+            <div class="review">
+              <div class="review__pic"><img class="review__img" src="userfiles/sabancev.jpg" alt="img"></div>
+              <div class="review__text">
+                <p>Этот код выдержит любые испытания. Только пожалуйста, не загружаете сайт на слишком старых браузерах!</p>
+              </div>
+              <div class="review__author">Сабанцев Владимир</div>
+              <div class="review__author-position">— преподаватель</div>
+            </div>
+          </li>
+        </ul>
+        <div class="blur">
+          <div class="blur__bg"><img class="blur__img" src="assets/img/about_bg.png" alt=""></div>
+          <div class="blur__form-wrapper">
+            <div class="blur__form"></div>
+            <form class="form form_contact">
+              <h3 class="block-title">Связаться со мной</h3>
+              <label class="field">
+                <input class="field__input" type="text" name="name" placeholder="Имя"><span class="field__error">Введите логин</span>
+              </label>
+              <label class="field">
+                <input class="field__input" type="text" name="email" placeholder="Еmail"><span class="field__error">Введите пароль</span>
+              </label>
+              <label class="field">
+                <textarea class="field__input field__input_textarea" name="message" placeholder="Ваше сообщение"></textarea><span class="field__error">Введите пароль</span>
+              </label>
+              <div class="btns-panel">
+                <button class="btns-panel__item" type="submit">Отправить</button>
+                <button class="btns-panel__item" type="reset">Очистить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="reviews__scroll"><a class="scroll-link scroll-link_up" href="#">
             <svg class="scroll-link__icon">
               <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
-            </svg></a>
-        </div>
+            </svg></a></div>
       </section>
     </div>
     <footer class="footer">
@@ -149,12 +160,12 @@
             <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
           </div>
           <div class="footer-col footer-col__center">
-            <div class="footer__nav">
+            <div class="footer__navigation">
               <ul class="footer-nav">
                 <li class="footer-nav__item"><a class="footer-nav__link" href="projects.html">Мои работы</a></li>
                 <li class="footer-nav__item"><a class="footer-nav__link" href="about.html">Обо мне</a></li>
                 <li class="footer-nav__item"><a class="footer-nav__link" href="blog.html">Блог</a></li>
-                <li class="footer-nav__item"><a class="footer-nav__link" href="login.html">Авторизация</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="index.html">Авторизация</a></li>
               </ul>
             </div>
             <div class="footer__socials">

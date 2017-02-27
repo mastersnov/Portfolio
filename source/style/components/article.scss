@@ -21,6 +21,12 @@
   text-transform: uppercase;
   margin: 0 auto 30px;
   padding:0;
+  @include tablets{
+    font-size: 30px;
+  }
+  @include phones{
+    font-size: 21px;
+  }
 }
 
 .article__date{
@@ -28,13 +34,21 @@
   color: $color;
   font-family:"robotoregular";
   margin-bottom: 30px;
+  @include tablets{
+    font-size: 14px;
+  }
 }
 .article p{
   font-size: $textSize;
   color: $textColor;
   font-family:"robotoregular";
   line-height: 1.5;
+  @include tablets{
+    font-size: 14px;
+  }
 }
 .code{
   margin: 0;
+  max-width: 100%;
+  overflow: auto;
 }

@@ -1,5 +1,10 @@
 .user
-    .user__ava
-        img.user__img(src="userfiles/ava.jpg" alt="img")
-    .user__name #{user__name}
-    .user__descr #{user__descr}
+  .user__ava
+    img.user__img(src="userfiles/ava.jpg" alt="img")
+  .user__name
+    if page == 'blog'
+      h2.sect-title(style='background-image: url("assets/img/blog_header.png")') #{user__name}
+    else
+      h3.block-title #{user__name}
+  .user__descr
+    .block-text #{user__descr}
