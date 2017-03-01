@@ -13,16 +13,13 @@ section.first-sect
       include ../components/socials
 
     .first-sect__burger
-      //button.burger
-      //  + svg('burger-icon', 'hamburger')
       button.toogle-menu
         span.toogle-menu__line.toogle-menu__line_top
         span.toogle-menu__line.toogle-menu__line_middle
         span.toogle-menu__line.toogle-menu__line_bottom
 
-
-
-    a(href="#").scroll-link.scroll-link_down
-      + svg('scroll-link__icon', 'arrow_down')
+    .first-sect__scroll
+      a(href="#").scroll-link
+        + svg('scroll-link__icon', 'arrow_down')
 
     include menu

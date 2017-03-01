@@ -83,26 +83,14 @@
   margin-top: -115px;
 }
 
-.scroll-link{
-  display: block;
-  opacity: 0.7;
+.first-sect__scroll{
   position: absolute;
-  @include align(X);
+  left: 0;
+  right: 0;
   bottom: 70px;
-  @include trans();
-  z-index: 1;
-  &:hover{
-    opacity: 1;
-  }
-  @include tablets{
+  @include phones{
     bottom: 50px;
   }
-}
-
-.scroll-link__icon{
-  width: 26px;
-  height: 16px;
-  fill: #fff;
 }
 
 .first-sect__burger{

@@ -1,5 +1,9 @@
 .contacts{
-  @extend %likeForm;
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 5px;
+  overflow: hidden;
   padding: 40px;
   background-color: rgba(#f4f5f0, .85);
   position: absolute;

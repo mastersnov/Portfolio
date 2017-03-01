@@ -35,7 +35,12 @@
 }
 
 .first-info {
-  @extend %likeForm;
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
   background-color: rgba(18, 38, 32, .6);
   padding: 40px 0 85px;
   text-align: center;

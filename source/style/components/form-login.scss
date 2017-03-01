@@ -1,0 +1,35 @@
+.form-login {
+  text-align: center;
+  background-color: rgba(18, 38, 32, .6);
+  .block-title {
+    color: $textColorInvert;
+    &:after {
+      background: $textColorInvert;
+    }
+  }
+  .field {
+    padding-left: 45px;
+    background-color: #f0efe9;
+    text-align: left;
+  }
+  .field__input {
+    border-radius: 0 22px 22px 0;
+  }
+  .check {
+    margin: 20px 0;
+  }
+  .radio-gorup{
+
+  }
+  .btns-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+
+
+
+

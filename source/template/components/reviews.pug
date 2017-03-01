@@ -1,4 +1,7 @@
-section.reviews(style='background-image: url("assets/img/about_bg.png")')
+section.reviews
+
+  .reviews__bg
+    img(src="assets/img/about_bg.png" alt="").reviews__bg-img
 
   .reviews__title
     h2.sect-title(style='background-image: url("assets/img/about_header.png")')
@@ -8,13 +11,10 @@ section.reviews(style='background-image: url("assets/img/about_bg.png")')
 
   include ../components/review-list
 
+  .reviews__form-container
+    .reviews__form-bg
 
-  .blur
-    .blur__bg
-      img(src="assets/img/about_bg.png" alt="").blur__img
-    .blur__form-wrapper
-      .blur__form
-      include ../components/form_contact
+    include form-contact
 
   .reviews__scroll
     a(href="#").scroll-link.scroll-link_up

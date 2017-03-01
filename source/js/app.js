@@ -24,7 +24,7 @@
 var doc = document;
 
 
-var parallax = (function () {
+var parallaxScroll = (function () {
   var bg = doc.querySelector('.first-sect__bg'),
     user = doc.querySelector('.first-sect__user'),
     sectText = doc.querySelector('.first-sect__text-layer');
@@ -50,35 +50,46 @@ var parallax = (function () {
 window.onscroll = function () {
   var wScroll = window.pageYOffset;
 
-  parallax.init(wScroll);
+  if(doc.querySelector('.first-sect')){
+    parallaxScroll.init(wScroll);
+  }
 
 };
 
-var parallaxContainer = doc.querySelector('.parallax-mouse'),
-  layer = doc.querySelector('.parallax-mouse__layer');
-if(doc.querySelector('.parallax-mouse')){
-  window.addEventListener('mousemove', function (e) {
-    var pageX = e.pageX,
-      pageY = e.pageY,
-      initialX = (window.innerWidth / 2) - pageX,
-      initialY = (window.innerHeight / 2) - pageY,
-      positionX = initialX * 0.05,
-      positionY = initialY * 0.05,
-      layerStyle = layer.style,
-      transformParam = 'translate3d('+ positionX +'px, '+ positionY +'px, 0)';
 
-    layerStyle.webkitTransform = transformParam;
-    layerStyle.transform = transformParam;
-  });
+var parallaxMouse = (function () {
+  var layer = doc.querySelector('.parallax-mouse__layer');
+  return {
+    set: function () {
+      window.addEventListener('mousemove', function (e) {
+        var pageX = e.pageX,
+          pageY = e.pageY,
+          initialX = (window.innerWidth / 2) - pageX,
+          initialY = (window.innerHeight / 2) - pageY,
+          positionX = initialX * 0.05,
+          positionY = initialY * 0.05,
+          layerStyle = layer.style,
+          transformParam = 'translate3d('+ positionX +'px, '+ positionY +'px, 0)';
+
+        layerStyle.webkitTransform = transformParam;
+        layerStyle.transform = transformParam;
+      });
+    }
+  }
+}());
+
+if(doc.querySelector('.parallax-mouse')){
+  parallaxMouse.set();
 }
 
+
 var blur =(function () {
-  var wrapper = doc.querySelector('.blur__form-wrapper'),
-    form = doc.querySelector('.blur__form');
+  var wrapper = doc.querySelector('.reviews__form-container'),
+    form = doc.querySelector('.reviews__form-bg');
 
   return{
     set: function () {
-      var imgWidth = doc.querySelector('.blur__bg').offsetWidth,
+      var imgWidth = doc.querySelector('.reviews__bg').offsetWidth,
         posLeft = -wrapper.offsetLeft,
         posTop = -wrapper.offsetTop,
         blurCss = form.style;
@@ -88,11 +99,17 @@ var blur =(function () {
     }
   }
 }());
-blur.set();
+
+if(doc.querySelector('.reviews')){
+  blur.set();
+}
+
 
 
 window.onresize = function () {
-  blur.set();
+  if(doc.querySelector('.reviews')){
+    blur.set();
+  }
 };
 
 

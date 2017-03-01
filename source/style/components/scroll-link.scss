@@ -1,0 +1,25 @@
+.scroll-link{
+  display: block;
+  width: 26px;
+  height: 16px;
+  margin: 0 auto;
+  opacity: 0.7;
+  position: relative;
+  z-index:10;
+  cursor: pointer;
+  @include trans();
+
+  &__icon{
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+  }
+
+  &:hover{
+    opacity: 1;
+  }
+
+  &_up{
+    transform: rotate(180deg);
+  }
+}

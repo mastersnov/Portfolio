@@ -2,20 +2,9 @@
   min-height: 1355px;
   padding-top: 20px;
   text-align: center;
-  background: #f4f5f0 center bottom no-repeat;
-  background: none!important;
   position: relative;
-  .scroll-link_up{
-    position: static;
-    left: auto;
-    bottom: auto;
-    transform: rotate(180deg);
-  }
+  overflow: hidden;
 }
-.form_contact {
-  margin: 0 auto;
-}
-
 
 .reviews__title{
   @include tablets{
@@ -23,14 +12,39 @@
   }
 }
 
-.reviews__scroll{
+.reviews__bg{
+  min-width: 1800px;
   position: absolute;
-  bottom: 250px;
-  @include align(X);
-  @include desktops{
-    bottom: 350px;
-  }
-  @include phones{
-    bottom: 50px;
-  }
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.reviews__bg-img{
+  display: block;
+  width: 100%;
+}
+.reviews__form-container{
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin:0 auto 70px;
+  position: relative;
+}
+.reviews__form-bg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: url("../img/about_bg.png") center no-repeat;
+  filter: blur(20px);
+}
+
+
+.reviews__scroll{
+
 }

@@ -17,5 +17,5 @@ module.exports = {
     rootSize :    16
   },
 
-  condition: false
+  condition: true
 };
