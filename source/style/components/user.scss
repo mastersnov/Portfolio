@@ -20,11 +20,8 @@
 }
 
 .user__name {
-  font-family: 'robotomedium';
   margin-bottom: 10px;
-  @include phones{
-    font-size: 21px;
-  }
+
   .sect-title{
     color: $textColorInvert;
     &:after{
@@ -45,5 +42,6 @@
 .user__descr {
   .block-text{
     color: $textColorInvert;
+    line-height: 1;
   }
 }
