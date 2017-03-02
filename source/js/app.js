@@ -19,7 +19,29 @@
   $('.toogle-anchors').click(function() {
     $('.blog__nav').toggleClass('is-open');
   });
+
 })();
+
+var footerHeight =(function () {
+
+  return {
+    set: function () {
+      var footer = $('.footer'),
+          footerHeight= footer.height(),
+          lastSect = footer.prev().find('.sect').last();
+      if($(window).width() > 480){
+        lastSect.css('padding-bottom', footerHeight);
+      }else{
+        lastSect.removeAttr('style');
+      }
+    }
+  };
+}());
+footerHeight.set();
+
+$(window).resize(function(){
+  footerHeight.set();
+});
 
 var doc = document;
 
@@ -41,7 +63,10 @@ var parallaxScroll = (function () {
     init: function (wScroll) {
       this.move(bg, wScroll, 40);
       this.move(user, wScroll, 3);
-      this.move(sectText, wScroll, 10);
+      if(sectText){
+        this.move(sectText, wScroll, 10);
+      }
+
     }
   }
 }());
@@ -56,46 +81,20 @@ window.onscroll = function () {
 
 };
 
-
-var parallaxMouse = (function () {
-  var layer = doc.querySelector('.parallax-mouse__layer');
-  return {
-    set: function () {
-      window.addEventListener('mousemove', function (e) {
-        var pageX = e.pageX,
-          pageY = e.pageY,
-          initialX = (window.innerWidth / 2) - pageX,
-          initialY = (window.innerHeight / 2) - pageY,
-          positionX = initialX * 0.05,
-          positionY = initialY * 0.05,
-          layerStyle = layer.style,
-          transformParam = 'translate3d('+ positionX +'px, '+ positionY +'px, 0)';
-
-        layerStyle.webkitTransform = transformParam;
-        layerStyle.transform = transformParam;
-      });
-    }
-  }
-}());
-
-if(doc.querySelector('.parallax-mouse')){
-  parallaxMouse.set();
-}
-
-
 var blur =(function () {
   var wrapper = doc.querySelector('.reviews__form-container'),
+    wrapperImg = doc.querySelector('.reviews__bg-img'),
     form = doc.querySelector('.reviews__form-bg');
 
   return{
     set: function () {
       var imgWidth = doc.querySelector('.reviews__bg').offsetWidth,
         posLeft = -wrapper.offsetLeft,
-        posTop = -wrapper.offsetTop,
+        posTop = -wrapper.offsetTop + wrapperImg.offsetTop,
         blurCss = form.style;
 
       blurCss.backgroundSize = imgWidth +'px' + ' ' + 'auto';
-      blurCss.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px'
+      blurCss.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
     }
   }
 }());
@@ -110,6 +109,7 @@ window.onresize = function () {
   if(doc.querySelector('.reviews')){
     blur.set();
   }
+
 };
 
 
