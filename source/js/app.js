@@ -1,26 +1,53 @@
-(function() {
-  'use strict';
-  $('.toogle-menu').click(function() {
-    $(this).toggleClass('is-active');
-    $('.menu').toggleClass('is-open');
+
+
+$(document).ready(function () {
+
+  (function() {
+    $('.toogle-menu').click(function() {
+      $(this).toggleClass('is-active');
+      $('.menu').toggleClass('is-open');
+    });
+
+    $('.login-btn').click(function(e) {
+      e.preventDefault();
+      $('.flip-container').addClass('is-flipped');
+      $(this).addClass('is-hidden')
+    });
+    $('.go-index').click(function(e) {
+      e.preventDefault();
+      $('.flip-container').removeClass('is-flipped');
+      $('.login-btn').removeClass('is-hidden');
+    });
+
+    $('.toogle-anchors').click(function() {
+      $('.blog__nav').toggleClass('is-open');
+    });
+
+  })();
+
+  footerHeight.set();
+
+  if(doc.querySelector('.reviews')){
+    blur.set();
+  }
+
+  $(window).resize(function(){
+    footerHeight.set();
+    if(doc.querySelector('.reviews')){
+      blur.set();
+    }
   });
 
-  $('.login-btn').click(function(e) {
-    e.preventDefault();
-    $('.flip-container').addClass('is-flipped');
-    $(this).addClass('is-hidden')
-  });
-  $('.go-index').click(function(e) {
-    e.preventDefault();
-    $('.flip-container').removeClass('is-flipped');
-    $('.login-btn').removeClass('is-hidden');
-  });
+  window.onscroll = function () {
+    var wScroll = window.pageYOffset;
 
-  $('.toogle-anchors').click(function() {
-    $('.blog__nav').toggleClass('is-open');
-  });
+    if(doc.querySelector('.first-sect')){
+      parallaxScroll.init(wScroll);
+    }
 
-})();
+  };
+});
+
 
 var footerHeight =(function () {
 
@@ -37,11 +64,6 @@ var footerHeight =(function () {
     }
   };
 }());
-footerHeight.set();
-
-$(window).resize(function(){
-  footerHeight.set();
-});
 
 var doc = document;
 
@@ -72,15 +94,6 @@ var parallaxScroll = (function () {
 }());
 
 
-window.onscroll = function () {
-  var wScroll = window.pageYOffset;
-
-  if(doc.querySelector('.first-sect')){
-    parallaxScroll.init(wScroll);
-  }
-
-};
-
 var blur =(function () {
   var wrapper = doc.querySelector('.reviews__form-container'),
     wrapperImg = doc.querySelector('.reviews__bg-img'),
@@ -99,18 +112,21 @@ var blur =(function () {
   }
 }());
 
-if(doc.querySelector('.reviews')){
-  blur.set();
-}
 
-
-
-window.onresize = function () {
+$(document).ready(function () {
   if(doc.querySelector('.reviews')){
     blur.set();
   }
 
-};
+  window.onresize = function () {
+    if(doc.querySelector('.reviews')){
+      blur.set();
+    }
+  };
+});
+
+
+
 
 
 
