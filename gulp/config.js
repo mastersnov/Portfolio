@@ -15,7 +15,5 @@ module.exports = {
   cssUnitConfig: {
     type     :    'px-to-rem',
     rootSize :    16
-  },
-
-  condition: true
+  }
 };

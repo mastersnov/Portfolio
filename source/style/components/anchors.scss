@@ -1,35 +1,27 @@
-.wrap-anchors {
-  position: relative;
-  top: 0;
-  &.fixed {
-    width: 100%;
-    max-width: 290px;
-    left: 5.7%;
-  }
-  @include desktops{
-    &.fixed{
-      left: 2%;
-    }
-  }
-}
-.fixed {
-  position: fixed;
-  top: 0;
-}
-
 .anchors{
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative;
   text-align: right;
   @include tablets{
     position: absolute;
     @include align(Y);
   }
+
+  &.is-fixed{
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    max-width: 290px;
+    @include tablets{
+      top:50%;
+    }
+  }
+
 }
 .anchors__item{
-  display: inline-block;
+  display: block;
   font-size: $textSize;
   color: $textColor;
   font-family:"robotomedium";
@@ -75,6 +67,8 @@
 //    color: $colorAccent;
 //  }
 //}
+
+
 .toogle-anchors {
   display: none;
   width: 20px;

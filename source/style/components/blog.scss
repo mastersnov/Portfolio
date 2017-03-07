@@ -26,23 +26,23 @@
     }
   }
 
-  .layout {
-    &:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: $footerHeight;
-      @include desktops{
-        height: 266px;
-      }
-      @include tablets{
-        height: 304px;
-      }
-      @include phones{
-        height: 429px;
-      }
-    }
-  }
+  //.layout {
+  //  &:after {
+  //    content: '';
+  //    display: block;
+  //    width: 100%;
+  //    height: $footerHeight;
+  //    @include desktops{
+  //      height: 266px;
+  //    }
+  //    @include tablets{
+  //      height: 304px;
+  //    }
+  //    @include phones{
+  //      height: 429px;
+  //    }
+  //  }
+  //}
 
   //@include laptops{
   //  .first-sect__bg{
@@ -99,8 +99,7 @@
   @include phones{
     padding-top: 30px;
   }
-}
-.blog{
+
   .both-head{
     fill: #faf8f0;
   }
@@ -113,6 +112,7 @@
   @include trans();
   @include tablets{
     height: 100vh;
+    background-color: rgba($colorAccent, .8);
     position: fixed;
     top: 0;
     left: 0;
@@ -120,7 +120,6 @@
     z-index: 10;
   }
   &.is-open{
-    background-color: rgba($colorAccent, .8);
     transform: translateX(0);
   }
 }

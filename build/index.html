@@ -59,13 +59,13 @@
                   <input class="field__input" type="text" name="loogin" placeholder="Логин">
                   <svg class="field__icon field__icon_login">
                     <use xlink:href="assets/img/sprite.svg#login"></use>
-                  </svg><span class="field__error-msg">Введите логин</span>
+                  </svg><span class="field__error-msg">YOU SHELL NOT PASS!</span>
                 </label>
                 <label class="field">
                   <input class="field__input" type="text" name="password" placeholder="Пароль">
                   <svg class="field__icon field__icon_pas">
                     <use xlink:href="assets/img/sprite.svg#password"></use>
-                  </svg><span class="field__error-msg">Введите пароль</span>
+                  </svg><span class="field__error-msg">YOU SHELL NOT PASS!</span>
                 </label>
                 <label class="check">
                   <input class="checkbox" type="checkbox" name="human">
@@ -76,10 +76,10 @@
                 <div class="radio-gorup">
                   <div class="radio-group__title">Вы точно не робот?</div>
                   <label class="radio">
-                    <input class="radiobox" type="radio" name="sure"><span class="radio-label">Да</span>
+                    <input class="radiobox" type="radio" name="sure" value="yes"><span class="radio-label">Да</span>
                   </label>
                   <label class="radio">
-                    <input class="radiobox" type="radio" name="sure" checked><span class="radio-label">Не уверен</span>
+                    <input class="radiobox" type="radio" name="sure" value="no" checked><span class="radio-label">Не уверен</span>
                   </label>
                 </div>
                 <div class="btns-panel"><a class="btns-panel__item go-index" href="index.html">На главную</a>
@@ -98,5 +98,11 @@
         </div>
       </div>
     </footer>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
   </body>
 </html>

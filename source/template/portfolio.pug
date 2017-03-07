@@ -7,8 +7,14 @@ html
     include components/head
 
   body.body(class=`body_${page}`)
+
     .layout
       block content
 
     footer.footer
       include components/footer
+
+    .preloader
+      .preloader__spinner
+        .preloader__animation
+        .preloader__percents 0%

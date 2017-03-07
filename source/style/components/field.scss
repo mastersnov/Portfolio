@@ -51,8 +51,11 @@
     display: none;
     max-width: 100%;
     background-color: $errorColor;
+    border-radius: 22px;
     font-size: 14px;
     color: $textColorInvert;
+    text-align: center;
+    white-space: nowrap;
     padding: 10px 20px;
     position: absolute;
     top: calc(100% + 10px);

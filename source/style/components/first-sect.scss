@@ -28,6 +28,7 @@
 }
 .first-sect__bg{
   height: 1500px;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -45,8 +46,18 @@
 
 .first-sect__bg-img{
   display: block;
-  height: 100%;
-  margin:0 auto;
+  max-width: 180%;
+  position: absolute;
+  top: 0;
+  @include align(X);
+
+  @include desktops{
+    max-width: 200%;
+  }
+
+  @include laptops{
+    max-width: 220%;
+  }
 }
 
 .first-sect__text-layer{

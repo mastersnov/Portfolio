@@ -9,6 +9,8 @@ section.sect.slider
   .slider__col.slider__col-left
     .slider__monitor
       img(src="assets/img/slide.png" alt="img").slider__img
+
+
     .slider__info
       .slider__info-title
         h2.block-title
@@ -16,14 +18,28 @@ section.sect.slider
       .slider__info-skils
         |HTML , CSS, JAVASCRIPT
       .slider__info-btn
-        a(href="#").show-link
+        a(href="#" target="_blank").show-link
           + svg ('show-link__icon', 'link')
           | Посмореть сайт
+
+
   .slider__col.slider__col-right
     .slider__nav-bar
       a(href="#").slider__nav.slider__nav-left
-        img(src="assets/img/slide-prev.jpg" alt="img").slider__nav-img
-        + svg ('slider__nav-icon', 'portf_arrow_up')
+
+        ul.slider__nav-list
+          li.slider__nav-item(data-full='userfiles/slider/1.png', data-title='Агентсво интернет решений "ITLoft"', data-skills='node', data-link='http://itloft.ru/')
+            img.slider___control-img(src='userfiles/slider/1.png')
+          li.slider__nav-item(data-full='userfiles/slider/2.png', data-title='Школа онлай-образования "LoftSchool"', data-skills='html5, CSS3, javascript, php', data-link='http://loftschool.com/')
+            img.slider___control-img(src='userfiles/slider/2.png')
+          li.slider__nav-item(data-full='userfiles/slider/3.png', data-title='Портал обучающих уроков "LoftBlog"', data-skills='Ruby on Rails, javascript, RESTful', data-link='http://loftblog.ru/')
+            img.slider___control-img(src='userfiles/slider/3.png')
+          li.slider__nav-item(data-full='userfiles/slider/4.png', data-title='Сайт "Атма йога"', data-skills='UX, design, seo', data-link='http://atmayoga.ru/')
+            img.slider___control-img(src='userfiles/slider/4.png')
+
+
+        + svg ('slider__nav-icon', 'portf_arrow_down')
+        
       a(href="#").slider__nav.slider__nav-right
         img(src="assets/img/slide-next.jpg" alt="img").slider__nav-img
-        + svg ('slider__nav-icon', 'portf_arrow_down')
+        + svg ('slider__nav-icon', 'portf_arrow_up')

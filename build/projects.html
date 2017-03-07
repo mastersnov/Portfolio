@@ -82,19 +82,25 @@
               <h2 class="block-title">Сайт школы онлайн Образования</h2>
             </div>
             <div class="slider__info-skils">HTML , CSS, JAVASCRIPT</div>
-            <div class="slider__info-btn"><a class="show-link" href="#">
+            <div class="slider__info-btn"><a class="show-link" href="#" target="_blank">
                 <svg class="show-link__icon">
                   <use xlink:href="assets/img/sprite.svg#link"></use>
                 </svg>Посмореть сайт</a></div>
           </div>
         </div>
         <div class="slider__col slider__col-right">
-          <div class="slider__nav-bar"><a class="slider__nav slider__nav-left" href="#"><img class="slider__nav-img" src="assets/img/slide-prev.jpg" alt="img">
-              <svg class="slider__nav-icon">
-                <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
-              </svg></a><a class="slider__nav slider__nav-right" href="#"><img class="slider__nav-img" src="assets/img/slide-next.jpg" alt="img">
+          <div class="slider__nav-bar"><a class="slider__nav slider__nav-left" href="#">
+              <ul class="slider__nav-list">
+                <li class="slider__nav-item" data-full="userfiles/slider/1.png" data-title="Агентсво интернет решений &quot;ITLoft&quot;" data-skills="node" data-link="http://itloft.ru/"><img class="slider___control-img" src="userfiles/slider/1.png"></li>
+                <li class="slider__nav-item" data-full="userfiles/slider/2.png" data-title="Школа онлай-образования &quot;LoftSchool&quot;" data-skills="html5, CSS3, javascript, php" data-link="http://loftschool.com/"><img class="slider___control-img" src="userfiles/slider/2.png"></li>
+                <li class="slider__nav-item" data-full="userfiles/slider/3.png" data-title="Портал обучающих уроков &quot;LoftBlog&quot;" data-skills="Ruby on Rails, javascript, RESTful" data-link="http://loftblog.ru/"><img class="slider___control-img" src="userfiles/slider/3.png"></li>
+                <li class="slider__nav-item" data-full="userfiles/slider/4.png" data-title="Сайт &quot;Атма йога&quot;" data-skills="UX, design, seo" data-link="http://atmayoga.ru/"><img class="slider___control-img" src="userfiles/slider/4.png"></li>
+              </ul>
               <svg class="slider__nav-icon">
                 <use xlink:href="assets/img/sprite.svg#portf_arrow_down"></use>
+              </svg></a><a class="slider__nav slider__nav-right" href="#"><img class="slider__nav-img" src="assets/img/slide-next.jpg" alt="img">
+              <svg class="slider__nav-icon">
+                <use xlink:href="assets/img/sprite.svg#portf_arrow_up"></use>
               </svg></a></div>
         </div>
       </section>
@@ -130,13 +136,13 @@
           <form class="form form-contact">
             <h3 class="block-title">Связаться со мной</h3>
             <label class="field">
-              <input class="field__input" type="text" name="name" placeholder="Имя"><span class="field__error-msg">Введите логин</span>
+              <input class="field__input" type="text" name="name" placeholder="Имя"><span class="field__error-msg">Введите имя</span>
             </label>
             <label class="field">
-              <input class="field__input" type="text" name="email" placeholder="Еmail"><span class="field__error-msg">Введите пароль</span>
+              <input class="field__input" type="text" name="email" placeholder="Еmail"><span class="field__error-msg">Введите емейл</span>
             </label>
             <label class="field">
-              <textarea class="field__input field__input_textarea" name="message" placeholder="Ваше сообщение"></textarea><span class="field__error-msg">Введите пароль</span>
+              <textarea class="field__input field__input_textarea" name="message" placeholder="Ваше сообщение"></textarea><span class="field__error-msg">Введите текст сообщения</span>
             </label>
             <div class="btns-panel">
               <button class="btns-panel__item" type="submit">Отправить</button>
@@ -195,5 +201,11 @@
         </div>
       </div>
     </footer>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation"></div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
   </body>
 </html>

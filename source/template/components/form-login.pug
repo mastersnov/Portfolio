@@ -6,13 +6,13 @@ form.form.form-login
     input(type="text" name="loogin" placeholder="Логин").field__input
     svg.field__icon.field__icon_login
       use(xlink:href="assets/img/sprite.svg#login")
-    span.field__error-msg Введите логин
+    span.field__error-msg YOU SHELL NOT PASS!
 
   label.field
     input(type="text" name="password" placeholder="Пароль").field__input
     svg.field__icon.field__icon_pas
       use(xlink:href="assets/img/sprite.svg#password")
-    span.field__error-msg Введите пароль
+    span.field__error-msg YOU SHELL NOT PASS!
 
   label.check
     input(type="checkbox" name="human").checkbox
@@ -22,10 +22,10 @@ form.form.form-login
   .radio-gorup
     .radio-group__title Вы точно не робот?
     label.radio
-      input(type="radio" name="sure").radiobox
+      input(type="radio" name="sure" value="yes").radiobox
       span.radio-label Да
     label.radio
-      input(type="radio" name="sure" checked).radiobox
+      input(type="radio" name="sure" value="no" checked).radiobox
       span.radio-label Не уверен
 
   .btns-panel
