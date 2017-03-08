@@ -7,7 +7,10 @@
   "author": "V. Sukhanov",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
     "browser-sync": "~2.18.7",
+    "browserify": "^14.1.0",
     "del": "~2.2.2",
     "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
     "gulp-autoprefixer": "~3.1.1",
@@ -27,8 +30,11 @@
     "gulp-sourcemaps": "~2.4.0",
     "gulp-svg-sprite": "~1.3.1",
     "gulp-svgmin": "~1.2.2",
+    "gulp-uglify": "^2.0.1",
     "gulp.spritesmith": "^6.3.0",
-    "merge-stream": "^1.0.1"
+    "merge-stream": "^1.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "normalize.css": "~5.0.0",
