@@ -1,6 +1,8 @@
 'use strict';
+
+var validation = require("./validation")();
+
 module.exports = function(){
-  var loginForm = (function () {
     var init = function () {
       _setUpListeners();
     };
@@ -46,5 +48,4 @@ module.exports = function(){
     return{
       init: init
     }
-  }());
 };

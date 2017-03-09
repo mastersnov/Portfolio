@@ -1,7 +1,8 @@
 'use strict';
-module.exports = function(){
-  var contact = (function () {
 
+var validation = require("./validation")();
+
+module.exports = function(){
     var init = function () {
       _setUpListeners();
     };
@@ -22,11 +23,10 @@ module.exports = function(){
     var _ajaxForm = function (form, url) {
       console.log('ajax with walidation');
       if(!validation.validateForm(form)) return false
-
     };
 
     return {
       init: init,
     }
-  }());
+
 };

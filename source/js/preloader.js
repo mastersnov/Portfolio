@@ -1,6 +1,5 @@
 'use strict';
 module.exports = function(){
-  var preloader = (function(){
     var percentsTotal = 0;
     var preloader = $('.preloader');
 
@@ -56,5 +55,4 @@ module.exports = function(){
         loadImages(imgs);
       }
     }
-  }());
 };

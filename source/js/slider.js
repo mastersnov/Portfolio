@@ -1,6 +1,7 @@
 'use strict';
-module.exports = function(){
-  var Slider = function (container) {
+var   aviatitle = require("./aviatitle")();
+
+module.exports = function(container){
     var nextBtn = container.find('.slider__nav-left'),
       prevBtn = container.find('.slider__nav-right'),
       items = nextBtn.find('.slider__nav-item'),
@@ -15,7 +16,7 @@ module.exports = function(){
     var timeout;
 
     this.counter = 0;
-
+    var _that = this;
     // private Генерация разметки кнопки следующий слайд
     var generateMarkups = function () {
       var list = nextBtn.find('.slider__nav-list'),
@@ -25,7 +26,7 @@ module.exports = function(){
       .prepend(markups)
       .find('.slider__nav-item')
       .removeClass('active')
-      .eq(this.counter + 1)
+      .eq(_that.counter + 1)
       .addClass('active');
     };
     // Вытащить данные из дата атрибутов для левой части слайдера
@@ -208,5 +209,4 @@ module.exports = function(){
         changeTextData(_that.counter);
       }
     };
-  };
 };

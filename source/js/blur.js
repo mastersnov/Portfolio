@@ -1,13 +1,12 @@
 'use strict';
 module.exports = function(){
-  var blur =(function () {
-    var wrapper = doc.querySelector('.reviews__form-container'),
-      wrapperImg = doc.querySelector('.reviews__bg-img'),
-      form = doc.querySelector('.reviews__form-bg');
+    var wrapper = document.querySelector('.reviews__form-container'),
+      wrapperImg = document.querySelector('.reviews__bg-img'),
+      form = document.querySelector('.reviews__form-bg');
 
     return{
       set: function () {
-        var imgWidth = doc.querySelector('.reviews__bg').offsetWidth,
+        var imgWidth = document.querySelector('.reviews__bg').offsetWidth,
           posLeft = -wrapper.offsetLeft,
           posTop = -wrapper.offsetTop + wrapperImg.offsetTop,
           blurCss = form.style;
@@ -16,5 +15,4 @@ module.exports = function(){
         blurCss.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
       }
     }
-  }());
 };

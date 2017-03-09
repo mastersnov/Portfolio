@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(){
-  var aviatitle = {
+  return {
     generate: function (string, block) {
       var wordsArray = string.split(' '),
         stringArray = string.split(''),

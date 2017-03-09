@@ -1,9 +1,8 @@
 'use strict';
 module.exports = function(){
-  var parallaxScroll = (function () {
-    var bg = doc.querySelector('.first-sect__bg'),
-      user = doc.querySelector('.first-sect__user'),
-      sectText = doc.querySelector('.first-sect__text-element');
+    var bg = document.querySelector('.first-sect__bg'),
+      user = document.querySelector('.first-sect__user'),
+      sectText = document.querySelector('.first-sect__text-element');
     return {
       move: function (block, windowScroll, strafeAmount) {
         var strafe = windowScroll / -strafeAmount + '%';
@@ -23,5 +22,4 @@ module.exports = function(){
 
       }
     }
-  }());
 };

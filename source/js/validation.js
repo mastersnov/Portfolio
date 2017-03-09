@@ -1,6 +1,5 @@
 'use strict';
 module.exports = function(){
-  var validation = (function () {
 
     var init = function () {
       _setUpListeners();
@@ -46,5 +45,5 @@ module.exports = function(){
       init: init,
       validateForm: validateForm
     }
-  }());
+
 };

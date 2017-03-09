@@ -12,7 +12,7 @@ module.exports = function() {
     .pipe($.source('app.js'))
     .pipe($.buffer())
     .pipe($.gp.if($.develop, $.gp.sourcemaps.init()))
-    // .pipe($.gp.uglify())
+    .pipe($.gp.if(!$.develop, $.gp.uglify()))
     .pipe($.gp.if($.develop, $.gp.sourcemaps.write()))
     .pipe($.gulp.dest($.config.root + '/assets/js'))
   })
